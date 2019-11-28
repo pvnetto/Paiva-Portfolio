@@ -1,11 +1,14 @@
 import { Vector3, Face3 } from 'three';
+import perlin from './perlin';
 
-const CreateGrid = (points) => {
 
-    const gridSizeX = 200;
-    const gridSizeZ = 200;
+const CreateGrid = (offset = 0) => {
+    perlin.noise.seed(43132);
 
-    const cellSize = 1;
+    const gridSizeX = 100;
+    const gridSizeZ = 100;
+
+    const cellSize = 2;
     const grid = [];
     const vertices = [];
     const faces = [];
@@ -23,8 +26,8 @@ const CreateGrid = (points) => {
 
         for (let x = 0; x < cellCountX; x++) {
             const currentX = x * cellSize + baseX;
-
-            grid[z].push(new Vector3(currentX, currentZ, 0))
+            const currentHeight = perlin.noise.perlin2(z / 4 + offset, x / 4) * 1.2;
+            grid[z].push(new Vector3(currentX, currentHeight, currentZ));
         }
     }
 
