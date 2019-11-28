@@ -29,6 +29,7 @@ const PageCanvas = () => {
     return (
         <Canvas style={{ position: 'absolute', width: '100%', height: '100vh' }}>
             <CanvasClearColor />
+            <directionalLight color={0xffffff} intensity={0.5} />
             <CanvasFog />
             <PlaneMesh />
         </Canvas>
