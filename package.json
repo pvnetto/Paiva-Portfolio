@@ -1,0 +1,47 @@
+{
+  "name": "paiva-portfolio",
+  "version": "1.0.0",
+  "description": "Paiva's Portfolio website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "paiva",
+    "pvnetto",
+    "portfolio",
+    "html",
+    "css",
+    "3d",
+    "three",
+    "javascript",
+    "react",
+    "unity3d",
+    "front-end"
+  ],
+  "author": "Paiva",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-three-fiber": "^3.0.15",
+    "three": "^0.111.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
