@@ -3,6 +3,8 @@ import { Canvas, useThree } from 'react-three-fiber';
 import PlaneMesh from './meshes/PlaneMesh';
 import { Euler, Fog } from 'three';
 
+import style from './canvas.module.css';
+
 // This empty Component initializes Canvas configurations.
 // It's needed because we can't call useThree from inside PageCanvas,
 // because Canvas is the Provider for useThree's context.
@@ -33,7 +35,7 @@ const Camera = () => {
 const PageCanvas = () => {
 
     return (
-        <Canvas style={{ position: 'absolute', width: '100%', height: '100vh' }}>
+        <Canvas className={style.pageCanvas} style={{}}>
             <directionalLight color={0xffffff} intensity={0.5} />
             <Camera />
             <CanvasClearColor />

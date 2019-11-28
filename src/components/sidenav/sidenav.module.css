@@ -1,0 +1,9 @@
+.sidenav {
+    --sidenav-color: #131313;
+
+    position: absolute;
+    width: 45px;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--sidenav-color);
+}

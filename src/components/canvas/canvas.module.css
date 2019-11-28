@@ -1,0 +1,6 @@
+/* Needs to be marked as important, or won't override react-three-fiber properties. */
+.pageCanvas {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100vh!important;
+}
