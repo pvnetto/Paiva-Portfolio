@@ -1,9 +1,41 @@
 .sidenav {
     --sidenav-color: #131313;
 
-    position: absolute;
     width: 45px;
     height: 100vh;
+    
+    position: absolute;
     z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
     background-color: var(--sidenav-color);
+}
+
+.sidenavBtnsContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin: 1rem 0rem;
+}
+
+.sidenavBtn {
+    padding: 0.5rem;
+    color: white;
+    opacity: 0.5;
+
+    font-size: 1.5rem;
+}
+
+.socialMediaBtn {
+    padding: 0.5rem;
+    color: white;
+    opacity: 0.5;
+
+    font-size: 1rem;
 }
