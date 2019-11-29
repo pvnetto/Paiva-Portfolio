@@ -26,7 +26,6 @@ const Camera = () => {
 
     camera.position.y = 2;
     camera.position.z = 0;
-    // camera.setFocalLength(60);
     camera.setRotationFromEuler(new Euler(0.23, 0, 0));
 
 

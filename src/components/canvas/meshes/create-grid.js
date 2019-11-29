@@ -8,7 +8,7 @@ const CreateGrid = (offset = 0) => {
     const gridSizeX = 100;
     const gridSizeZ = 100;
 
-    const cellSize = 2;
+    const cellSize = 1;
     const grid = [];
     const vertices = [];
     const faces = [];

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './home.module.css';
-import Container from '../commons/Container';
+import Container from '../commons/container';
 
 const Home = () => {
     return (

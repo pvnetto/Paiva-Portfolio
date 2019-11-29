@@ -1,25 +1,24 @@
 import React from 'react';
-import Container from '../commons/Container';
+import Container from '../commons/container';
+import Content from '../commons/content';
 
 import style from './about.module.css';
 
 const About = () => {
     return (
         <Container>
-            <div>
-                <div className={style.container}>
-                    <h1 className={style.header}>About Me</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur <span className={style.emphasized}>adipiscing</span> elit. Etiam at ligula finibus, laoreet lectus et, placerat urna.
-                        Donec maximus sollicitudin neque, non consequat orci convallis sed. Maecenas faucibus leo a consectetur egestas.
+            <Content>
+                <Content.Header>About Me</Content.Header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur <Content.Emphasized>adipiscing</Content.Emphasized> elit. Etiam at ligula finibus, laoreet lectus et, placerat urna.
+                    Donec maximus sollicitudin neque, non consequat orci convallis sed. Maecenas faucibus leo a consectetur egestas.
                     </p>
-                    <p>
-                        Morbi id volutpat odio. Quisque mollis <span className={style.emphasized}>luctus</span> egestas. Mauris orci risus, dignissim quis ex ut,
-                        efficitur convallis odio. Praesent et dui nec <span className={style.emphasized}>ipsum</span> rhoncus vestibulum. Sed aliquam lectus nec sapien mattis,
-                        vel ultrices nisi congue.
+                <p>
+                    Morbi id volutpat odio. Quisque mollis <Content.Emphasized>luctus</Content.Emphasized> egestas. Mauris orci risus, dignissim quis ex ut,
+                        efficitur convallis odio. Praesent et dui nec <Content.Emphasized>ipsum</Content.Emphasized> rhoncus vestibulum. Sed aliquam lectus nec sapien mattis,
+                    vel ultrices nisi congue.
                     </p>
-                </div>
-            </div>
+            </Content>
         </Container>
     );
 };

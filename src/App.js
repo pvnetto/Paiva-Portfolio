@@ -3,13 +3,15 @@ import PageCanvas from './components/canvas';
 import Sidenav from './components/sidenav/Sidenav';
 import Home from './components/home';
 import About from './components/about/About';
+import Skills from './components/skills/Skills';
 
 const App = () => {
     return (
         <>
             <Sidenav />
-            <Home />
+            {/* <Home /> */}
             {/* <About /> */}
+            <Skills />
             <PageCanvas />
         </>
     );
