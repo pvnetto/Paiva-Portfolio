@@ -17,16 +17,17 @@ const CanvasClearColor = () => {
 
 const CanvasFog = () => {
     const { scene } = useThree();
-    scene.fog = new Fog(0x000000, 1, 50);
+    scene.fog = new Fog(0x000000, 1, 60);
     return <></>
 }
 
 const Camera = () => {
     const { camera } = useThree();
 
-    camera.position.y = 10;
+    camera.position.y = 2;
     camera.position.z = 0;
-    camera.setRotationFromEuler(new Euler(0, 0, 0));
+    // camera.setFocalLength(60);
+    camera.setRotationFromEuler(new Euler(0.23, 0, 0));
 
 
     return <></>

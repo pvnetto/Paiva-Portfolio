@@ -12,6 +12,7 @@
     --font-color-alt: #3C3C3C;
 
     --blue: #30BCED;
+    --orange: #DB995A;
 
     --sidenav-color: #131313;
     --sidenav-width: 45px;
@@ -25,4 +26,8 @@ body {
 
 h1 {
     margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
 }
