@@ -1,0 +1,28 @@
+.btnsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    width: 32%;
+    margin: 0.2rem 0.2rem;
+    padding: 0.3rem 0;
+    border: 2px solid var(--blue);
+
+    background-color: transparent;
+    color: var(--blue);
+    
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.filterBtn:hover, .filterBtn.active {
+    background-color: var(--blue);
+    color: var(--font-color);
+}

@@ -6,8 +6,8 @@ import { Euler, Fog } from 'three';
 import style from './canvas.module.css';
 
 // This empty Component initializes Canvas configurations.
-// It's needed because we can't call useThree from inside PageCanvas,
-// because Canvas is the Provider for useThree's context.
+// We can't call useThree from inside PageCanvas because
+// Canvas is the Provider for useThree's context, but these components can.
 const CanvasClearColor = () => {
     const { gl } = useThree();
     gl.setClearColor(0x000000, 1);
