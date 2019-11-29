@@ -14,8 +14,8 @@ const App = () => {
             {/* <Home /> */}
             {/* <About /> */}
             {/* <Skills /> */}
-            <Projects />
-            {/* <Contact /> */}
+            {/* <Projects /> */}
+            <Contact />
             <PageCanvas />
         </>
     );

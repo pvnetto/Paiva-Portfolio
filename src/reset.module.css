@@ -23,7 +23,7 @@ body {
     color: var(--font-color);
 }
 
-body, button {
+body, button, input {
     font-family: 'Share Tech Mono';
 }
 
