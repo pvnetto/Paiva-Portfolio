@@ -21,7 +21,10 @@
 body {
     margin: 0px;
     color: var(--font-color);
-    font-family: 'Share Tech Mono'
+}
+
+body, button {
+    font-family: 'Share Tech Mono';
 }
 
 h1 {

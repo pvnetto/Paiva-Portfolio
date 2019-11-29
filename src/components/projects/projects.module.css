@@ -1,3 +1,9 @@
+.filterHeader {
+    margin-top: 3rem;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
 .btnsContainer {
     display: flex;
     flex-direction: row;
@@ -25,4 +31,6 @@
 .filterBtn:hover, .filterBtn.active {
     background-color: var(--blue);
     color: var(--font-color);
+
+    cursor: pointer;
 }
