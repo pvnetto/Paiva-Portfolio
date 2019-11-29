@@ -1,7 +1,5 @@
 .sidenav {
-    --sidenav-color: #131313;
-
-    width: 45px;
+    width: var(--sidenav-width);
     height: 100vh;
     
     position: absolute;
@@ -25,17 +23,15 @@
 }
 
 .sidenavBtn {
-    padding: 0.5rem;
-    color: white;
-    opacity: 0.5;
+    margin: 0.5rem 0rem;
+    color: var(--font-color-alt);
 
     font-size: 1.5rem;
 }
 
 .socialMediaBtn {
-    padding: 0.5rem;
-    color: white;
-    opacity: 0.5;
+    margin: 0.5rem 0rem;
+    color: var(--font-color-alt);
 
     font-size: 1rem;
 }

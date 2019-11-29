@@ -1,0 +1,28 @@
+/* @font-face {
+    font-family: 'Mono821';
+    src: url('./public/fonts/mono821n.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+} */
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+
+/* TODO: USE SCSS AND MOVE VARIABLES TO VARIABLES */
+:root {
+    --font-color: white;
+    --font-color-alt: #3C3C3C;
+
+    --blue: #30BCED;
+
+    --sidenav-color: #131313;
+    --sidenav-width: 45px;
+}
+
+body {
+    margin: 0px;
+    color: var(--font-color);
+    font-family: 'Share Tech Mono'
+}
+
+h1 {
+    margin: 0;
+}

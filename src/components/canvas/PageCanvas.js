@@ -24,7 +24,7 @@ const CanvasFog = () => {
 const Camera = () => {
     const { camera } = useThree();
 
-    camera.position.y = 2;
+    camera.position.y = 10;
     camera.position.z = 0;
     camera.setRotationFromEuler(new Euler(0, 0, 0));
 

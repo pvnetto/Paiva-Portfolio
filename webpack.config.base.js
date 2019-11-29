@@ -17,21 +17,27 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1,
+                            // importLoaders: 1,
                             modules: true
                         }
                     }
                 ],
                 include: /\.module\.css$/
             },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         'style-loader',
+            //         'css-loader'
+            //     ],
+            //     exclude: /\.module\.css$/
+            // },
             {
-                test: /\.css$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
-                    'style-loader',
-                    'css-loader'
+                    'url-loader',
                 ],
-                exclude: /\.module\.css$/
-            }
+            },
         ]
     },
     resolve: {
