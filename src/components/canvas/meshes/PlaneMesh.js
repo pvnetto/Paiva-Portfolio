@@ -13,7 +13,7 @@ const PlaneMesh = () => {
 
     useFrame(() => {
         if (geomRef.current) {
-            currentOffset -= 0.01;
+            currentOffset -= 0.001;
             const { vertices } = CreateGrid(currentOffset);
 
             planeVertices = [];

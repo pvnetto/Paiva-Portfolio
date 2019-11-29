@@ -53,6 +53,8 @@
     padding-left: 1rem;
 
     background-color: var(--font-color-alt);
+
+    font-size: 1.2rem;
 }
 
 .contactForm input:focus, .contactForm textarea:focus {

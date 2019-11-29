@@ -7,8 +7,9 @@
 }
 
 .content {
+    position: relative;
     margin-left: var(--sidenav-width);
-    padding-left: 7rem;
+    padding: 0 7rem;
     height: 100%;
 
     display: flex;

@@ -1,0 +1,81 @@
+.infoContainer {
+    position: relative;
+    margin: 5rem 0 auto 0;
+    align-self: center;
+
+    max-width: 90%;
+}
+
+.closeBtn {
+    position: absolute;
+    width: 100%;
+}
+
+.closeBtn > * {
+    width: 60px;
+    height: 3px;
+
+    background-color: white;
+    opacity: 0.8;
+    margin: 0 auto;
+}
+
+.closeBtn div:nth-child(1) {
+    transform: translateY(100%) rotateZ(45deg);
+}
+
+.closeBtn div:nth-child(2) {
+    transform: rotateZ(-45deg);
+}
+
+.header {
+    color: var(--blue);
+    font-size: 2rem;
+}
+
+.infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 3rem 0;
+}
+
+.infoItem > h3 {
+    color: var(--font-color);
+    opacity: 0.5;
+
+    margin: 0.3rem 0;
+}
+
+.infoItem > p {
+    margin: 0 0;
+}
+
+.infoItem.description > p {
+    margin: 1rem 0;
+}
+
+.btnContainer {
+
+}
+.btnContainer > button {
+    width: 150px;
+
+    margin: 0.2rem 0.2rem;
+    padding: 0.5rem 0;
+    border: 2px solid var(--blue);
+
+    background-color: transparent;
+    color: var(--blue);
+    
+    font-size: 1rem;
+
+    transition: all 0.2s ease;
+}
+
+.btnContainer > button:hover {
+    background-color: var(--blue);
+    color: var(--font-color);
+    cursor: pointer;
+}
