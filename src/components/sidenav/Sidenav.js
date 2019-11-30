@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCode, faFistRaised, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import style from './sidenav.module.css'
+import SidenavLink from './SidenavLink';
 
 
 const Sidenav = () => {
@@ -15,11 +15,11 @@ const Sidenav = () => {
                 <p>P</p>
             </div>
             <div className={style.sidenavBtnsContainer}>
-                <Link className={style.sidenavBtn} to=""><FontAwesomeIcon icon={faHome} /></Link>
-                <Link className={style.sidenavBtn} to="about"><FontAwesomeIcon icon={faUser} /></Link>
-                <Link className={style.sidenavBtn} to="skills"><FontAwesomeIcon icon={faFistRaised} /></Link>
-                <Link className={style.sidenavBtn} to="projects"><FontAwesomeIcon icon={faCode} /></Link>
-                <Link className={style.sidenavBtn} to="contact"><FontAwesomeIcon icon={faEnvelope} /></Link>
+                <SidenavLink title={"Home"} to={"/"} icon={faHome} />
+                <SidenavLink title={"About"} to={"/about"} icon={faUser} />
+                <SidenavLink title={"Skills"} to={"/skills"} icon={faFistRaised} />
+                <SidenavLink title={"Works"} to={"/projects"} icon={faCode} />
+                <SidenavLink title={"Contact"} to={"/contact"} icon={faEnvelope} />
             </div>
 
             <div className={style.sidenavBtnsContainer}>
