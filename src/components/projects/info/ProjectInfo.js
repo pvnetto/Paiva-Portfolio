@@ -42,9 +42,9 @@ const ProjectInfo = ({ title, category, techs, role, description }) => {
                         justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.</p>
                     </div>
 
-                    <div className={style.btnContainer}>
-                        <button>Live Version</button>
-                        <button> <FontAwesomeIcon icon={faGithub} /> GitHub</button>
+                    <div>
+                        <button className={style.infoBtn}>Live Version</button>
+                        <button className={style.infoBtn}> <FontAwesomeIcon icon={faGithub} /> GitHub</button>
                     </div>
 
                     <div>

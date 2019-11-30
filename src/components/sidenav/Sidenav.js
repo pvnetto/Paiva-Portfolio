@@ -1,9 +1,11 @@
 import React from 'react';
-import style from './sidenav.module.css'
-
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCode, faFistRaised, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import style from './sidenav.module.css'
+
 
 const Sidenav = () => {
 
@@ -13,11 +15,11 @@ const Sidenav = () => {
                 <p>P</p>
             </div>
             <div className={style.sidenavBtnsContainer}>
-                <a className={style.sidenavBtn} href=""><FontAwesomeIcon icon={faHome} /></a>
-                <a className={style.sidenavBtn} href=""><FontAwesomeIcon icon={faUser} /></a>
-                <a className={style.sidenavBtn} href=""><FontAwesomeIcon icon={faFistRaised} /></a>
-                <a className={style.sidenavBtn} href=""><FontAwesomeIcon icon={faCode} /></a>
-                <a className={style.sidenavBtn} href=""><FontAwesomeIcon icon={faEnvelope} /></a>
+                <Link className={style.sidenavBtn} to=""><FontAwesomeIcon icon={faHome} /></Link>
+                <Link className={style.sidenavBtn} to="about"><FontAwesomeIcon icon={faUser} /></Link>
+                <Link className={style.sidenavBtn} to="skills"><FontAwesomeIcon icon={faFistRaised} /></Link>
+                <Link className={style.sidenavBtn} to="projects"><FontAwesomeIcon icon={faCode} /></Link>
+                <Link className={style.sidenavBtn} to="contact"><FontAwesomeIcon icon={faEnvelope} /></Link>
             </div>
 
             <div className={style.sidenavBtnsContainer}>

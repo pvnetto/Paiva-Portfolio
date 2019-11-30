@@ -56,10 +56,7 @@
     margin: 1rem 0;
 }
 
-.btnContainer {
-
-}
-.btnContainer > button {
+.infoBtn {
     width: 150px;
 
     margin: 0.2rem 0.2rem;
@@ -74,7 +71,7 @@
     transition: all 0.2s ease;
 }
 
-.btnContainer > button:hover {
+.infoBtn:hover {
     background-color: var(--blue);
     color: var(--font-color);
     cursor: pointer;
