@@ -1,9 +1,9 @@
 import React from 'react';
-import Container from '../commons/container';
-import Content from '../commons/content';
+import Container from '../../commons/container';
+import Content from '../../commons/content';
 
 import style from './about.module.css';
-import BlinkCaret from '../commons/caret/BlinkCaret';
+import BlinkCaret from '../../commons/caret/BlinkCaret';
 
 const About = () => {
 

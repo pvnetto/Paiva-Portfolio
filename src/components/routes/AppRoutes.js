@@ -1,10 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from '../home';
-import About from '../about';
-import Skills from '../skills';
-import Projects from '../projects';
-import Contact from '../contact';
+
+import Home from '../pages/home';
+import About from '../pages/about';
+import Skills from '../pages/skills';
+import Projects from '../pages/projects';
+import Contact from '../pages/contact';
 
 const AppRoutes = () => {
     return (

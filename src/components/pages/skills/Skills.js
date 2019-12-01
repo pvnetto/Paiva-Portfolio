@@ -1,6 +1,6 @@
 import React from 'react';
-import Content from '../commons/content';
-import Container from '../commons/container';
+import Content from '../../commons/content';
+import Container from '../../commons/container';
 
 const Skills = () => {
     return (

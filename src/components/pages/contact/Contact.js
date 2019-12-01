@@ -1,9 +1,9 @@
 import React from 'react';
-import Content from '../commons/content';
-import Container from '../commons/container';
+import Content from '../../commons/content';
+import Container from '../../commons/container';
 
 import style from './contact.module.css';
-import BlinkCaret from '../commons/caret/BlinkCaret';
+import BlinkCaret from '../../commons/caret/BlinkCaret';
 
 const Contact = () => {
     return (
