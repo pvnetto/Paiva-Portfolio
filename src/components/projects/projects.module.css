@@ -28,7 +28,8 @@
 
 .filterBtn:hover, .filterBtn.active {
     background-color: var(--blue);
-    color: var(--font-color);
+    color: var(--font-color-alt);
+    font-weight: 900;
 
     cursor: pointer;
 }

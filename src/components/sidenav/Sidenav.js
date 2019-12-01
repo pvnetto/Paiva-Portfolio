@@ -4,8 +4,8 @@ import { faHome, faUser, faCode, faFistRaised, faEnvelope } from '@fortawesome/f
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import style from './sidenav.module.css'
-import SidenavLink from './SidenavLink';
 
+import SidenavLink from './link';
 
 const Sidenav = () => {
 

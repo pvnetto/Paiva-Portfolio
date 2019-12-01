@@ -8,7 +8,7 @@ const CreateGrid = (offset = 0) => {
     const gridSizeX = 100;
     const gridSizeZ = 100;
 
-    const cellSize = 3;
+    const cellSize = 1;
     const grid = [];
     const vertices = [];
     const faces = [];
@@ -26,7 +26,7 @@ const CreateGrid = (offset = 0) => {
 
         for (let x = 0; x < cellCountX; x++) {
             const currentX = x * cellSize + baseX;
-            const currentHeight = perlin.noise.perlin2(z / 32 + offset, x / 32);
+            const currentHeight = perlin.noise.simplex2(z / 64 + offset, x / 64);
             grid[z].push(new Vector3(currentX, currentHeight, currentZ));
         }
     }

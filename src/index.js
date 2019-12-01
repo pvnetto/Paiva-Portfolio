@@ -2,6 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import './reset.module.css';
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+const AppWrapper = () => {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" component={App} />
+            </Switch>
+        </BrowserRouter>
+    )
+}
+
+ReactDOM.render(<AppWrapper />, document.querySelector('#app'));

@@ -3,14 +3,15 @@ import Content from '../commons/content';
 import Container from '../commons/container';
 
 import style from './contact.module.css';
+import BlinkCaret from '../commons/caret/BlinkCaret';
 
 const Contact = () => {
     return (
         <Container>
             <Content>
-                <Content.Header>Contact Me</Content.Header>
+                <Content.Header text={"Contact Me"} />
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam at ligula finibus, laoreet lectus et, placerat urna.</p>
+                    Etiam at ligula finibus, laoreet lectus et, placerat urna. <BlinkCaret /></p>
                 <form className={style.contactForm} action="">
                     <div>
                         <input name="name" type="text" placeholder="Name" />

@@ -1,0 +1,11 @@
+.caret {
+    border-right: .15em solid white; /* The typwriter cursor */
+    animation: blink-caret .75s step-end infinite;
+    padding-right: 0.3rem;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}

@@ -6,7 +6,7 @@ const Skills = () => {
     return (
         <Container>
             <Content>
-                <Content.Header>My Skills</Content.Header>
+                <Content.Header text={"My Skills"} />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur <Content.Emphasized>adipiscing</Content.Emphasized> elit.
                     Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat

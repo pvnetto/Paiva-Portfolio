@@ -1,0 +1,36 @@
+.sidenavBtn {
+    margin: 0.5rem 0rem;
+    color: var(--font-color-alt);
+
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.sidenavBtn p {
+    position: absolute;
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0;
+
+    transition: all 0.2s ease-in;
+}
+
+.sidenavBtn:hover {
+    color: var(--blue);
+}
+
+.sidenavBtn:hover p {
+    opacity: 1;
+}
+
+.sidenavBtn:hover svg {
+    opacity: 0;
+}
+
+.sidenavBtn.active {
+    color: var(--blue);
+}

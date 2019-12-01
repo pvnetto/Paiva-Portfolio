@@ -9,7 +9,7 @@ const Projects = () => {
     return (
         <Container>
             <Content>
-                <Content.Header>My Projects</Content.Header>
+                <Content.Header text={"My Projects"} />
                 <p>Lorem ipsum dolor sit amet, consectetur <Content.Emphasized>adipiscing</Content.Emphasized> elit.
                     Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat
                     orci convallis sed. Maecenas faucibus leo a consectetur egestas.</p>
