@@ -3,7 +3,7 @@ import { useTypewriter } from './TypewriterContext';
 
 import BlinkCaret from '../caret/BlinkCaret';
 
-const TypewriterParagraph = ({ children, order, typeCyclesPerSecond = 100, charactersPerCycle = 3 }) => {
+const TypewriterParagraph = ({ children, order, typeCyclesPerSecond = 20, charactersPerCycle = 12 }) => {
     const [currentText, setCurrentText] = useState("");
     const [characters, setCharacters] = useState([]);
     const [isTyping, setIsTyping] = useState(false);

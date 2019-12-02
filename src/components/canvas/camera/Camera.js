@@ -29,9 +29,7 @@ const CameraRigs = (scene) => {
 }
 
 const Camera = ({ currentScene }) => {
-    const { camera, scene, gl } = useThree();
-
-    const initialRot = new Euler(0.23, 0, 0);
+    const { camera } = useThree();
 
     const [startPos, setStartPos] = useState(null);
     const [targetPos, setTargetPos] = useState(null);
@@ -45,9 +43,7 @@ const Camera = ({ currentScene }) => {
     // The camera's start position equals its initial target position
     useEffect(() => {
         camera.near = 7.2;
-
-        // Forces camera to update the near plane
-        camera.updateProjectionMatrix();
+        camera.updateProjectionMatrix();    // Forces camera to update the near plane
     }, []);
 
     useEffect(() => {
@@ -57,7 +53,6 @@ const Camera = ({ currentScene }) => {
 
         setTargetPos(currentRig.pos);
         setTargetRot(currentRig.rot);
-        // animationTime = 0;
     }, [currentScene])
 
     useFrame((state, delta) => {
