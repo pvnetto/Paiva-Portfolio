@@ -36,7 +36,7 @@ const PageCanvas = () => {
             <directionalLight color={0xffffff} intensity={0.5} />
 
             <Effects currentScene={currentScene} />
-            <Camera />
+            <Camera currentScene={currentScene} />
             <CanvasClearColor />
             <CanvasFog />
             <PlaneMesh />
