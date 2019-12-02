@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 
-const TypewriterContext = React.createContext();
+export const TypewriterContext = React.createContext();
 export const useTypewriter = () => useContext(TypewriterContext);
 export const TypewriterProvider = ({ children }) => {
 

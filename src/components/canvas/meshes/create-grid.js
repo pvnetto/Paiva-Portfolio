@@ -5,8 +5,8 @@ import perlin from './perlin';
 const CreateGrid = (offset = 0) => {
     perlin.noise.seed(43132);
 
-    const gridSizeX = 100;
-    const gridSizeZ = 100;
+    const gridSizeX = 150;
+    const gridSizeZ = 50;
 
     const cellSize = 1;
     const grid = [];
@@ -17,7 +17,7 @@ const CreateGrid = (offset = 0) => {
     let cellCountZ = Math.ceil(gridSizeZ / cellSize);
 
     const baseX = -0.5 * gridSizeX;
-    const baseZ = -0.5 * gridSizeZ;
+    const baseZ = -1.03 * gridSizeZ;
 
     // Render grid
     for (let z = 0; z < cellCountZ; z++) {
@@ -26,7 +26,7 @@ const CreateGrid = (offset = 0) => {
 
         for (let x = 0; x < cellCountX; x++) {
             const currentX = x * cellSize + baseX;
-            const currentHeight = perlin.noise.simplex2(z / 2 + offset, x / 2);
+            const currentHeight = perlin.noise.simplex2(z / 6 + offset, x / 6);
             grid[z].push(new Vector3(currentX, currentHeight, currentZ));
         }
     }

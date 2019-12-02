@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Content from '../../commons/content';
 import Container from '../../commons/container';
 
@@ -6,8 +6,16 @@ import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 
 import style from './projects.module.css';
+import { useScene } from '../../scenes/SceneContext';
+import Scenes from '../../scenes/Scenes';
 
 const Projects = () => {
+
+    const { setScene } = useScene();
+
+    useEffect(() => {
+        setScene(Scenes.PROJECTS);
+    }, [])
 
     return (
         <Container>

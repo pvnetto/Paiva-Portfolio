@@ -27,11 +27,7 @@ const PlaneMesh = () => {
     });
 
     return (
-        <mesh ref={meshRef}
-            position={[0, 0, 0]} drawMode={TriangleStripDrawMode}
-        // onClick={e => console.log('click')} onPointerOver={e => console.log('hover')} onPointerOut={e => console.log('unhover')}
-        >
-
+        <mesh ref={meshRef} position={[0, 0, 0]} drawMode={TriangleStripDrawMode}>
             <bufferGeometry ref={geomRef} faces={planeFaces} attach="geometry" />
             <meshBasicMaterial attach="material" color="green" wireframe side={DoubleSide} />
         </mesh>

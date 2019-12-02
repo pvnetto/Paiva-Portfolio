@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import Content from '../../commons/content';
 import Container from '../../commons/container';
-import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 
-import style from './contact.module.css';
+import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 
+import { useScene } from '../../scenes/SceneContext';
+import Scenes from '../../scenes/Scenes';
+
+import style from './contact.module.css';
+
 const Contact = () => {
+
+    const { setScene } = useScene();
+
+    useEffect(() => {
+        setScene(Scenes.CONTACT);
+    }, []);
+
     return (
         <Container>
             <Content>

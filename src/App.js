@@ -4,14 +4,17 @@ import { BrowserRouter } from 'react-router-dom';
 import PageCanvas from './components/canvas';
 import Sidenav from './components/sidenav';
 import AppRoutes from './components/routes/AppRoutes';
+import { SceneProvider } from './components/scenes/SceneContext';
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <Sidenav />
-            <AppRoutes />
-            <PageCanvas />
-        </ BrowserRouter>
+        <SceneProvider >
+            <BrowserRouter>
+                <Sidenav />
+                <PageCanvas />
+                <AppRoutes />
+            </ BrowserRouter>
+        </SceneProvider>
     );
 };
 

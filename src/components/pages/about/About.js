@@ -1,13 +1,22 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 
 import Container from '../../commons/container';
 import Content from '../../commons/content';
 import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
+import { useScene } from '../../scenes/SceneContext';
+import Scenes from '../../scenes/Scenes';
 
 import style from './about.module.css';
 
 const About = () => {
+
+    const { setScene } = useScene();
+
+    useEffect(() => {
+        console.log(setScene);
+        setScene(Scenes.ABOUT);
+    }, []);
 
     return (
         <Container>
@@ -25,7 +34,6 @@ const About = () => {
                             Maecenas faucibus leo a consectetur egestas.
                     </TypewriterParagraph>
                 </TypewriterProvider>
-
             </Content>
         </Container>
     );

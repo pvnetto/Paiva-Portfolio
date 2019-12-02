@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './home.module.css';
 import Container from '../../commons/container';
+import { useScene } from '../../scenes/SceneContext';
+import Scenes from '../../scenes/Scenes';
 
 const Home = () => {
+
+    const { setScene } = useScene();
+
+    useEffect(() => {
+        setScene(Scenes.HOME);
+    }, []);
+
     return (
         <Container>
             <div>
