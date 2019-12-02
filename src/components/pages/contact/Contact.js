@@ -17,6 +17,7 @@ const Contact = () => {
                         Etiam at ligula finibus, laoreet lectus et, placerat urna.
                     </TypewriterParagraph>
                 </TypewriterProvider>
+
                 <form className={style.contactForm} action="">
                     <div>
                         <input name="name" type="text" placeholder="Name" />

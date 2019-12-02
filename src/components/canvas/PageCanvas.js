@@ -1,11 +1,13 @@
-import React, { useRef, useEffect } from 'react';
-import { Canvas, extend, useThree, useFrame } from 'react-three-fiber';
+import React, { useState, useRef, useEffect } from 'react';
+import { Canvas, extend, useThree, useFrame, useCamera } from 'react-three-fiber';
 import { Euler, Fog, Vector3, Quaternion } from 'three';
 
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
-extend({ EffectComposer, RenderPass, GlitchPass })
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass';
+import { BloomPass } from 'three/examples/jsm/postprocessing/BloomPass';
+import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass';
+extend({ EffectComposer, RenderPass, GlitchPass, BloomPass, FilmPass })
 
 import PlaneMesh from './meshes/PlaneMesh';
 import SphereMesh from './meshes/SphereMesh';
@@ -30,46 +32,60 @@ const CanvasFog = () => {
 const Camera = () => {
     const { camera, scene, gl } = useThree();
 
-    camera.position.y = 2;
-    camera.position.z = 0;
-    camera.setRotationFromEuler(new Euler(0.23, 0, 0));
+    const initialRot = new Euler(0.23, 0, 0);
 
-    const startPos = new Vector3(camera.position.x, camera.position.y, camera.position.z);
-    const targetPos = new Vector3(0, -20, 0);
+    const [startPos, setStartPos] = useState(new Vector3(0, 2, 0));
+    const [targetPos, setTargetPos] = useState(null);
 
-    const startRot = new Quaternion();
-    const targetRot = new Quaternion();
-    startRot.setFromEuler(camera.rotation);
-    targetRot.setFromEuler(new Euler(0, 0, 0));
+    const [startRot, setStartRot] = useState(null);
+    const [targetRot, setTargetRot] = useState(null);
+
+    // The camera's start position equals its initial target position
+    useEffect(() => {
+        camera.position.set(startPos.x, startPos.y, startPos.z);
+        camera.setRotationFromQuaternion(initialRot);
+
+        const startRotQuat = new Quaternion().setFromEuler(initialRot);
+        setStartRot(startRotQuat);
+
+        const targetRotQuat = new Quaternion().setFromEuler(initialRot);
+        setTargetRot(targetRotQuat);
+        setTargetPos(new Vector3(startPos.x, startPos.y, startPos.z));
+    }, []);
 
     const animationDuration = 0.5;
-
     let animationTime = 0;
 
-    // useFrame((state, delta) => {
-    //     animationTime += delta;
-    //     let animationT = animationTime / animationDuration;
-    //     animationT = Math.min(animationT, 1.0);
+    useFrame((state, delta) => {
+        animationTime += delta;
+        let animationT = animationTime / animationDuration;
+        animationT = Math.min(animationT, 1.0);
 
-    //     camera.position.lerpVectors(startPos, targetPos, animationT);
+        camera.position.lerpVectors(startPos, targetPos, animationT);
 
-    //     const currentRot = new Quaternion();
-    //     Quaternion.slerp(startRot, targetRot, currentRot, animationT);
-    //     camera.setRotationFromQuaternion(currentRot);
-    // });
+        const currentRot = new Quaternion();
+        Quaternion.slerp(startRot, targetRot, currentRot, animationT);
+        camera.setRotationFromQuaternion(currentRot);
+    });
 
     return <></>
 }
 
 const Effects = () => {
-    const { gl, scene, camera, size } = useThree()
-    const composer = useRef()
-    useEffect(() => void composer.current.setSize(size.width, size.height), [size])
-    useFrame(() => composer.current.render(), 1)
+    const { gl, scene, camera, size } = useThree();
+    const composer = useRef();
+
+    const [isGlitching, setIsGlitching] = useState(true);
+
+    useEffect(() => void composer.current.setSize(size.width, size.height), [size]);
+    useFrame(() => composer.current.render(), 1);
+
     return (
         <effectComposer ref={composer} args={[gl]}>
-            <renderPass attachArray="passes" args={[scene, camera]} />
-            <glitchPass attachArray="passes" renderToScreen />
+            <renderPass attachArray="passes" args={[scene, camera]} renderToScreen />
+            <bloomPass attachArray="passes" args={[1, 25, 0.7, 1024]} />
+            <filmPass attachArray="passes" args={[0.35, 0.025, 648, false]} renderToScreen />
+            {/* {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null} */}
         </effectComposer>
     )
 }
@@ -77,11 +93,11 @@ const Effects = () => {
 const PageCanvas = () => {
 
     return (
-        <Canvas className={style.pageCanvas} style={{}}>
+        <Canvas className={style.pageCanvas}>
             <directionalLight color={0xffffff} intensity={0.5} />
 
+            <Effects />
             <Camera />
-            {/* <Effects /> */}
             <CanvasClearColor />
             <CanvasFog />
             <PlaneMesh />
