@@ -3,6 +3,7 @@ import Content from '../../commons/content';
 import Container from '../../commons/container';
 
 import style from './projects.module.css';
+import BlinkCaret from '../../commons/caret/BlinkCaret';
 
 const Projects = () => {
 
@@ -12,7 +13,7 @@ const Projects = () => {
                 <Content.Header text={"My Projects"} />
                 <p>Lorem ipsum dolor sit amet, consectetur <Content.Emphasized>adipiscing</Content.Emphasized> elit.
                     Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat
-                    orci convallis sed. Maecenas faucibus leo a consectetur egestas.</p>
+                    orci convallis sed. Maecenas faucibus leo a consectetur egestas. <BlinkCaret /></p>
 
                 <div>
                     <p className={style.filterHeader}>Filter by category:</p>

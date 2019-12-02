@@ -12,6 +12,8 @@
     color: var(--orange);
 }
 
+
+/* GLITCH EFFECT FROM: https://css-tricks.com/glitch-effect-text-images-svg/ */
 .glitch {
     position: relative;
 }
