@@ -42,6 +42,8 @@ const Camera = () => {
 
     // The camera's start position equals its initial target position
     useEffect(() => {
+        camera.near = 5;
+
         camera.position.set(startPos.x, startPos.y, startPos.z);
         camera.setRotationFromQuaternion(initialRot);
 
@@ -51,6 +53,9 @@ const Camera = () => {
         const targetRotQuat = new Quaternion().setFromEuler(initialRot);
         setTargetRot(targetRotQuat);
         setTargetPos(new Vector3(startPos.x, startPos.y, startPos.z));
+
+        // Forces camera to update the near plane
+        camera.updateProjectionMatrix();
     }, []);
 
     const animationDuration = 0.5;
@@ -75,7 +80,7 @@ const Effects = () => {
     const { gl, scene, camera, size } = useThree();
     const composer = useRef();
 
-    const [isGlitching, setIsGlitching] = useState(true);
+    const [isGlitching, setIsGlitching] = useState(false);
 
     useEffect(() => void composer.current.setSize(size.width, size.height), [size]);
     useFrame(() => composer.current.render(), 1);
@@ -85,7 +90,7 @@ const Effects = () => {
             <renderPass attachArray="passes" args={[scene, camera]} renderToScreen />
             <bloomPass attachArray="passes" args={[1, 25, 0.7, 1024]} />
             <filmPass attachArray="passes" args={[0.35, 0.025, 648, false]} renderToScreen />
-            {/* {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null} */}
+            {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null}
         </effectComposer>
     )
 }

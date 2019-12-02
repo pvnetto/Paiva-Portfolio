@@ -26,7 +26,7 @@ const CreateGrid = (offset = 0) => {
 
         for (let x = 0; x < cellCountX; x++) {
             const currentX = x * cellSize + baseX;
-            const currentHeight = perlin.noise.simplex2(z / 64 + offset, x / 64);
+            const currentHeight = perlin.noise.simplex2(z / 2 + offset, x / 2);
             grid[z].push(new Vector3(currentX, currentHeight, currentZ));
         }
     }

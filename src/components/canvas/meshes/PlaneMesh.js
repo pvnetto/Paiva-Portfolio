@@ -33,7 +33,6 @@ const PlaneMesh = () => {
         >
 
             <bufferGeometry ref={geomRef} faces={planeFaces} attach="geometry" />
-            {/* <planeBufferGeometry ref={planeRef} attach="geometry" args={scale} /> */}
             <meshBasicMaterial attach="material" color="green" wireframe side={DoubleSide} />
         </mesh>
     );
