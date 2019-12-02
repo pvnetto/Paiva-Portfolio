@@ -1,17 +1,22 @@
 import React from 'react';
 import Content from '../../commons/content';
 import Container from '../../commons/container';
+import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 
 import style from './contact.module.css';
-import BlinkCaret from '../../commons/caret/BlinkCaret';
+import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 
 const Contact = () => {
     return (
         <Container>
             <Content>
                 <Content.Header text={"Contact Me"} />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam at ligula finibus, laoreet lectus et, placerat urna. <BlinkCaret /></p>
+                <TypewriterProvider>
+                    <TypewriterParagraph order={0}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Etiam at ligula finibus, laoreet lectus et, placerat urna.
+                    </TypewriterParagraph>
+                </TypewriterProvider>
                 <form className={style.contactForm} action="">
                     <div>
                         <input name="name" type="text" placeholder="Name" />

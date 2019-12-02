@@ -2,8 +2,10 @@ import React from 'react';
 import Content from '../../commons/content';
 import Container from '../../commons/container';
 
+import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
+import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
+
 import style from './projects.module.css';
-import BlinkCaret from '../../commons/caret/BlinkCaret';
 
 const Projects = () => {
 
@@ -11,9 +13,14 @@ const Projects = () => {
         <Container>
             <Content>
                 <Content.Header text={"My Projects"} />
-                <p>Lorem ipsum dolor sit amet, consectetur <Content.Emphasized>adipiscing</Content.Emphasized> elit.
-                    Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat
-                    orci convallis sed. Maecenas faucibus leo a consectetur egestas. <BlinkCaret /></p>
+
+                <TypewriterProvider>
+                    <TypewriterParagraph order={0}>
+                        Lorem ipsum dolor sit amet, consectetur elit.
+                            Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat orci convallis sed.
+                            Maecenas faucibus leo a consectetur egestas.
+                    </TypewriterParagraph>
+                </TypewriterProvider>
 
                 <div>
                     <p className={style.filterHeader}>Filter by category:</p>
