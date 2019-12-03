@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Canvas, useThree } from 'react-three-fiber';
 import { Fog } from 'three';
 
@@ -10,6 +10,7 @@ import Effects from './effects';
 import { useScene } from '../scenes/SceneContext';
 
 import style from './canvas.module.css';
+import TexturedSphere from './meshes/TexturedSphere';
 
 // This empty Component initializes Canvas configurations.
 // We can't call useThree from inside PageCanvas because
@@ -33,14 +34,18 @@ const PageCanvas = () => {
 
     return (
         <Canvas className={style.pageCanvas}>
-            <directionalLight color={0xffffff} intensity={0.5} />
+            <directionalLight color={0xffffff} intensity={10} />
 
             <Effects currentScene={currentScene} />
             <Camera currentScene={currentScene} />
             <CanvasClearColor />
             <CanvasFog />
+
             <PlaneMesh />
             <SphereMesh />
+            <Suspense fallback={<SphereMesh />}>
+                <TexturedSphere />
+            </Suspense>
         </Canvas>
     );
 };

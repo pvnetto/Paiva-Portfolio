@@ -14,7 +14,6 @@ const About = () => {
     const { setScene } = useScene();
 
     useEffect(() => {
-        console.log(setScene);
         setScene(Scenes.ABOUT);
     }, []);
 

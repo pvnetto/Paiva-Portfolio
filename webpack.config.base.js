@@ -24,20 +24,18 @@ module.exports = {
                 ],
                 include: /\.module\.css$/
             },
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         'style-loader',
-            //         'css-loader'
-            //     ],
-            //     exclude: /\.module\.css$/
-            // },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
                     'url-loader',
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     },
     resolve: {

@@ -11,8 +11,8 @@ const App = () => {
         <SceneProvider >
             <BrowserRouter>
                 <Sidenav />
-                <PageCanvas />
                 <AppRoutes />
+                <PageCanvas />
             </ BrowserRouter>
         </SceneProvider>
     );
