@@ -7,7 +7,7 @@ import unityLogo from '../../../../public/images/unity_logo.png';
 const UnityLogo = () => {
     return (
         <Suspense fallback={<SphereMesh />}>
-            <PlaneTexture position={[15, -40, -15]} textureURL={unityLogo} order={0} />
+            <PlaneTexture textureURL={unityLogo} order={0} />
         </Suspense>
     );
 }

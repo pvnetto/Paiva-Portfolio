@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { TextureLoader, DoubleSide, Vector3 } from 'three';
 import { useFrame, useLoader } from 'react-three-fiber';
 
-const PlaneTexture = ({ position, textureURL, order }) => {
+const PlaneTexture = ({ textureURL, order }) => {
     const meshRef = useRef();
     const sphereRef = useRef();
 
@@ -19,9 +19,6 @@ const PlaneTexture = ({ position, textureURL, order }) => {
         const currentDisplacement = new Vector3(cosVal, sinVal, 0);
         const currentPos = new Vector3(center.x, center.y, center.z).add(currentDisplacement);
         meshRef.current.position.set(currentPos.x, currentPos.y, currentPos.z);
-
-        // console.log(sinVal);
-        // meshRef.current.rotation.y += 0.01;
     });
 
     const [texture] = useLoader(TextureLoader, textureURL);

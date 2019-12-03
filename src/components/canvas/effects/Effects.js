@@ -12,15 +12,23 @@ const Effects = ({ currentScene }) => {
     const { gl, scene, camera, size } = useThree();
 
     const composer = useRef();
-    const [isGlitching, setIsGlitching] = useState(false);
+    const [isGlitching, setIsGlitching] = useState(true);
 
     useEffect(() => {
-        setIsGlitching(true);
-
         setTimeout(() => {
             setIsGlitching(false);
         }, 1000);
-    }, [currentScene])
+    }, [])
+
+    useEffect(() => {
+        if (!isGlitching) {
+            setIsGlitching(true);
+
+            setTimeout(() => {
+                setIsGlitching(false);
+            }, 1000);
+        }
+    }, [currentScene]);
 
     useEffect(() => void composer.current.setSize(size.width, size.height), [size]);
     useFrame(() => composer.current.render(), 1);
@@ -28,9 +36,9 @@ const Effects = ({ currentScene }) => {
     return (
         <effectComposer ref={composer} args={[gl]}>
             <renderPass attachArray="passes" args={[scene, camera]} renderToScreen />
+            {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null}
             <bloomPass attachArray="passes" args={[1, 25, 0.8, 1024]} />
             <filmPass attachArray="passes" args={[0.35, 0.025, 648, false]} renderToScreen />
-            {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null}
         </effectComposer>
     )
 }

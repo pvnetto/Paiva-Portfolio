@@ -7,7 +7,7 @@ import htmlLogo from '../../../../public/images/html_logo.png';
 const HTMLLogo = () => {
     return (
         <Suspense fallback={<SphereMesh />}>
-            <PlaneTexture position={[5, -35, -15]} textureURL={htmlLogo} order={2} />
+            <PlaneTexture textureURL={htmlLogo} order={2} />
         </Suspense>
     );
 }

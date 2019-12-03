@@ -7,7 +7,7 @@ import jsLogo from '../../../../public/images/js_logo.svg';
 const JSLogo = () => {
     return (
         <Suspense fallback={<SphereMesh />}>
-            <PlaneTexture position={[15, -35, -15]} textureURL={jsLogo} order={3} />
+            <PlaneTexture textureURL={jsLogo} order={3} />
         </Suspense>
     );
 }
