@@ -10,8 +10,13 @@ import Effects from './effects';
 import { useScene } from '../scenes/SceneContext';
 
 import style from './canvas.module.css';
-import TexturedSphere from './meshes/TexturedSphere';
+
 import Cup from './meshes/Cup';
+import ReactLogo from './meshes/logos/ReactLogo';
+import UnityLogo from './meshes/logos/UnityLogo';
+import JSLogo from './meshes/logos/JSLogo';
+import HTMLLogo from './meshes/logos/HTMLLogo';
+import CSSLogo from './meshes/logos/CSSLogo';
 
 // This empty Component initializes Canvas configurations.
 // We can't call useThree from inside PageCanvas because
@@ -35,7 +40,7 @@ const PageCanvas = () => {
 
     return (
         <Canvas className={style.pageCanvas}>
-            <directionalLight color={0xffffff} intensity={10} />
+            <directionalLight color={0xffffff} intensity={1} />
 
             <Effects currentScene={currentScene} />
             <Camera currentScene={currentScene} />
@@ -44,9 +49,13 @@ const PageCanvas = () => {
 
             <PlaneMesh />
             <SphereMesh />
-            {/* <Suspense fallback={<SphereMesh />}>
-                <TexturedSphere />
-            </Suspense> */}
+
+            <ReactLogo />
+            <UnityLogo />
+            <JSLogo />
+            <HTMLLogo />
+            <CSSLogo />
+
             <Suspense fallback={<SphereMesh />}>
                 <Cup />
             </Suspense>

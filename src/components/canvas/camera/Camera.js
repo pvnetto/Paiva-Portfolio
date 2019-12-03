@@ -37,7 +37,7 @@ const Camera = ({ currentScene }) => {
     const [startRot, setStartRot] = useState(null);
     const [targetRot, setTargetRot] = useState(null);
 
-    const animationDuration = 1;
+    const animationDuration = 0.8;
     let animationTime = 0;
 
     // The camera's start position equals its initial target position

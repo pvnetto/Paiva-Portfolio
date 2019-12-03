@@ -23,7 +23,7 @@ const Cup = () => {
     });
 
     return (
-        <mesh ref={meshRef} position={[7, -20.5, -16]} rotation={[0, 0, 0]} scale={[0.08, 0.08, 0.08]}>
+        <mesh ref={meshRef} position={[7, -21, -16]} rotation={[0, 0, 0]} scale={[0.08, 0.08, 0.08]}>
             <primitive ref={sphereRef} attach="geometry" object={mugObj} />
         </mesh>
     );

@@ -28,7 +28,7 @@ const Effects = ({ currentScene }) => {
     return (
         <effectComposer ref={composer} args={[gl]}>
             <renderPass attachArray="passes" args={[scene, camera]} renderToScreen />
-            <bloomPass attachArray="passes" args={[1, 25, 0.7, 1024]} />
+            <bloomPass attachArray="passes" args={[1, 25, 0.8, 1024]} />
             <filmPass attachArray="passes" args={[0.35, 0.025, 648, false]} renderToScreen />
             {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null}
         </effectComposer>
