@@ -11,6 +11,7 @@ import { useScene } from '../scenes/SceneContext';
 
 import style from './canvas.module.css';
 import TexturedSphere from './meshes/TexturedSphere';
+import Cup from './meshes/Cup';
 
 // This empty Component initializes Canvas configurations.
 // We can't call useThree from inside PageCanvas because
@@ -43,8 +44,11 @@ const PageCanvas = () => {
 
             <PlaneMesh />
             <SphereMesh />
-            <Suspense fallback={<SphereMesh />}>
+            {/* <Suspense fallback={<SphereMesh />}>
                 <TexturedSphere />
+            </Suspense> */}
+            <Suspense fallback={<SphereMesh />}>
+                <Cup />
             </Suspense>
         </Canvas>
     );

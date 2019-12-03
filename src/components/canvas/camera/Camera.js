@@ -10,19 +10,19 @@ const CameraRigs = (scene) => {
             rot: new Quaternion().setFromEuler(new Euler(0.23, 0, 0))
         }
         case Scenes.ABOUT: return {
-            pos: new Vector3(0, -10, 0),
-            rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
-        }
-        case Scenes.SKILLS: return {
             pos: new Vector3(0, -20, 0),
             rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
         }
+        case Scenes.SKILLS: return {
+            pos: new Vector3(0, -40, 0),
+            rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
+        }
         case Scenes.PROJECTS: return {
-            pos: new Vector3(0, -30, 0),
+            pos: new Vector3(0, -60, 0),
             rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
         }
         case Scenes.CONTACT: return {
-            pos: new Vector3(0, -40, 0),
+            pos: new Vector3(0, -80, 0),
             rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
         }
     }
