@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { useFrame, useLoader } from 'react-three-fiber';
 
-import { MeshBasicMaterial, MeshPhongMaterial } from 'three';
+import { MeshPhongMaterial } from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
-import cup from '../../../public/objs/cup.obj';
+import cup from '../../../../public/objs/cup.obj';
 
 const Cup = () => {
     const meshRef = useRef();
