@@ -8,7 +8,7 @@ const PlaneTexture = ({ textureURL, order }) => {
 
     const animationRadius = 6;
     const animationSpeed = 1.3;
-    const center = new Vector3(10, -40, -15);
+    const center = new Vector3(8, -40, -15);
     let animationT = animationSpeed * order;
 
     useFrame((state, delta) => {

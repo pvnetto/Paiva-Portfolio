@@ -33,3 +33,27 @@
 
     cursor: pointer;
 }
+
+.itemContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-left: auto;
+    max-width: 50%;
+
+    transform: translateX(200%);
+    animation: enter-anim 0.5s ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;      /* Specifies the style for the animation when it's not playing */
+}
+
+
+@keyframes enter-anim {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

@@ -8,6 +8,7 @@ import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 import style from './projects.module.css';
 import { useScene } from '../../scenes/SceneContext';
 import Scenes from '../../scenes/Scenes';
+import ProjectItem from './item/ProjectItem';
 
 const Projects = () => {
 
@@ -50,6 +51,19 @@ const Projects = () => {
                     </div>
                 </div>
             </Content>
+
+            <div className={style.itemContainer}>
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+            </div>
+
         </Container>
     );
 };
