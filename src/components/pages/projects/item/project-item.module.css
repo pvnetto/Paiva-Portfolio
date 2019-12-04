@@ -1,11 +1,10 @@
 .item {
     position: relative;
-    width: 30%;
     display: inline-block;
-
+    width: 30%;
     margin: 0.2rem;
 
-    color: var(--text-color);
+    cursor: pointer;
 }
 
 .item img {

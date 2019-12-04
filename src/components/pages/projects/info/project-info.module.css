@@ -1,22 +1,44 @@
 .infoContainer {
-    position: relative;
-    margin: 5rem 0 auto 0;
-    align-self: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    max-width: 90%;
+    min-height: 100%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    padding: 0 10rem;
+}
+
+.closeBtnContainer {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3rem;
 }
 
 .closeBtn {
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    cursor: pointer;
+
+    opacity: 0.6;
+
+    transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+    opacity: 0.9;
 }
 
 .closeBtn > * {
     width: 60px;
-    height: 3px;
+    height: 8px;
 
-    background-color: white;
-    opacity: 0.8;
+    background-color: var(--font-color);
     margin: 0 auto;
 }
 

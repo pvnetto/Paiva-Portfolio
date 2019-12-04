@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Content from '../../commons/content';
 import Container from '../../commons/container';
 
@@ -9,14 +9,26 @@ import style from './projects.module.css';
 import { useScene } from '../../scenes/SceneContext';
 import Scenes from '../../scenes/Scenes';
 import ProjectItem from './item/ProjectItem';
+import ProjectInfo from './info/ProjectInfo';
 
 const Projects = () => {
 
     const { setScene } = useScene();
+    const [showInfoModal, setShowInfoModal] = useState(false);
+    const [modalData, setModalData] = useState({});
 
     useEffect(() => {
         setScene(Scenes.PROJECTS);
+
+        return () => {
+            setShowInfoModal(false);
+        }
     }, [])
+
+    const openInfoModal = (projectInfo) => {
+        setShowInfoModal(true);
+        setModalData({});
+    }
 
     return (
         <Container>
@@ -53,17 +65,18 @@ const Projects = () => {
             </Content>
 
             <div className={style.itemContainer}>
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
+                <ProjectItem onClick={openInfoModal} />
             </div>
 
+            <ProjectInfo {...modalData} show={showInfoModal} handleClose={() => setShowInfoModal(false)} />
         </Container>
     );
 };
