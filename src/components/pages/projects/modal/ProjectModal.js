@@ -1,11 +1,20 @@
 import React from 'react';
-import Container from '../../../commons/container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import style from './project-info.module.css';
+import style from './project-modal.module.css';
+import { text } from '../../../../../node_modules/@fortawesome/fontawesome-svg-core';
 
-const ProjectInfo = ({ show, handleClose, title, category, techs, role, description }) => {
+const reduceToString = (arr) => {
+    if (!arr) return "";
+    return arr.reduce((currentText, currentTech) => {
+        if (currentText != "") currentText += ', ';
+        currentText += currentTech;
+        return currentText;
+    }, "");
+}
+
+const ProjectModal = ({ show, handleClose, title, category, techs, roles, description }) => {
 
     return (
         <>
@@ -19,31 +28,27 @@ const ProjectInfo = ({ show, handleClose, title, category, techs, role, descript
                     </div>
                     <div>
                         <div className={style.header}>
-                            <h2>Chama! Bailão</h2>
+                            <h2>{title}</h2>
                         </div>
 
                         <div className={style.infoRow}>
                             <div className={style.infoItem}>
                                 <h3>Category</h3>
-                                <p>Game</p>
+                                <p>{category}</p>
                             </div>
                             <div className={style.infoItem}>
                                 <h3>Techs</h3>
-                                <p>C#, Unity3D</p>
+                                <p>{reduceToString(techs)}</p>
                             </div>
                             <div className={style.infoItem}>
                                 <h3>Role</h3>
-                                <p>Programmer</p>
+                                <p>{reduceToString(roles)}</p>
                             </div>
                         </div>
 
                         <div className={style.infoItem + " " + style.description}>
                             <h3>Description</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod suscipit velit, ut condimentum arcu fermentum in.
-                        Quisque egestas facilisis ante et convallis. Pellentesque a nunc in ligula placerat consectetur.</p>
-                            <p>In luctus ac ex vel sollicitudin. Aenean in tortor vel nulla efficitur efficitur sit amet ut orci.
-                                Sed dignissim diam purus, vel aliquam erat tincidunt at. In a orci nunc. Praesent nec risus sit amet
-                        justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.</p>
+                            {description.map((text, idx) => <p key={idx}>{text}</p>)}
                         </div>
 
                         <div>
@@ -60,4 +65,4 @@ const ProjectInfo = ({ show, handleClose, title, category, techs, role, descript
     );
 };
 
-export default ProjectInfo;
+export default ProjectModal;
