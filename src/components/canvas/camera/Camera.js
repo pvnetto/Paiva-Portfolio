@@ -22,8 +22,8 @@ const CameraRigs = (scene) => {
             rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
         }
         case Scenes.CONTACT: return {
-            pos: new Vector3(0, -80, 0),
-            rot: new Quaternion().setFromEuler(new Euler(0, 0, 0))
+            pos: new Vector3(0, -90, 0),
+            rot: new Quaternion().setFromEuler(new Euler(0.23, 0, 0))
         }
     }
 }

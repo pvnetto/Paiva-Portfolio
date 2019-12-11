@@ -11,7 +11,7 @@ const Ufo = () => {
     const sphereRef = useRef();
 
     let animationTime = 0;
-    const startPos = new Vector3(7, -79, -16);
+    const startPos = new Vector3(7, -84, -16);
     const horizontalMoveMult = 1.3;
     const animationSpeed = 2;
 
@@ -38,7 +38,7 @@ const Ufo = () => {
     });
 
     return (
-        <mesh ref={meshRef} rotation={[0, 0, 0]} scale={[2.2, 2.2, 2.2]}>
+        <mesh ref={meshRef} rotation={[0.46, 0, 0]} scale={[2.2, 2.2, 2.2]}>
             <primitive ref={sphereRef} attach="geometry" object={mugObj} />
         </mesh>
     );

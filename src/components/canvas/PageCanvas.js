@@ -57,6 +57,11 @@ const PageCanvas = () => {
             <HTMLLogo />
             <CSSLogo />
 
+            <mesh rotation={[90, 0, 0]} position={[7, -100, -16]} >
+                <planeBufferGeometry attach="geometry" args={[120, 120, 50, 50]} />
+                <meshBasicMaterial attach="material" wireframe color="green" />
+            </mesh>
+
             <Suspense fallback={<SphereMesh />}>
                 <Cup />
             </Suspense>
