@@ -1,19 +1,18 @@
-.header {
-    font-size: 4rem;
-}
-
 .emphasized {
     color: var(--blue);
 }
 
 .lowkey {
     opacity: 0.5;
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .btnContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .homeBtn {
@@ -27,4 +26,33 @@
     text-align: center;
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width: 1280px) {
+    
+}
+  
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 767px) {
+    .homeBtn {
+        width: 40%;
+    }
+
+    .lowkey {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .homeBtn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .lowkey {
+        font-size: 0.9rem;
+    }
 }

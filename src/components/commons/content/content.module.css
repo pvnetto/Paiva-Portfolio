@@ -1,9 +1,8 @@
 .container {
-    max-width: 40%;
+    max-width: 50%;
 }
 
 .header {
-    font-size: 4rem;
     text-transform: uppercase;
     color: var(--blue);
 }
@@ -71,4 +70,26 @@
     100% {
       clip-path: inset(58% 0 43% 0);
     }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 60%;
+    }
+}
+
+@media  (max-width: 1024px) {
+    .container {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
 }

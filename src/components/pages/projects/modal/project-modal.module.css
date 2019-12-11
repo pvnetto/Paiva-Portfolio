@@ -8,6 +8,7 @@
     background: rgba(0, 0, 0, 0.9);
 
     padding: 0 10rem;
+    margin-left: var(--sidenav-width);
 
     animation: fade-in 0.5s ease;
     animation-fill-mode: forwards; 
@@ -76,6 +77,10 @@
     margin: 3rem 0;
 }
 
+.infoItem {
+    width: 100%;
+}
+
 .infoItem > h3 {
     color: var(--font-color);
     opacity: 0.5;
@@ -91,8 +96,41 @@
     margin: 1rem 0;
 }
 
+.infoBtnContainer {
+    width: 100%;
+}
+
 .infoBtn {
     width: 150px;
     margin: 0.2rem 0.2rem;
     padding: 0.5rem 0;
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+    .infoContainer {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .infoContainer {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .infoContainer {
+        padding: 0 1rem;
+    }
+
+    .infoBtn {
+        width: 100%;
+    }
+
+    .infoItem > h3 {
+        font-size: 1rem;
+    }
 }

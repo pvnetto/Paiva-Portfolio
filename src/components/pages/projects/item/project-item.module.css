@@ -38,4 +38,29 @@
 
 .tooltip p {
     font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 1280px) {
+    .item {
+        width: 40%;
+    }
+}
+
+@media  (max-width: 1024px) {
+    .item {
+        width: 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%;
+    }
 }

@@ -51,7 +51,7 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, descri
                             {description.map((text, idx) => <p key={idx}>{text}</p>)}
                         </div>
 
-                        <div>
+                        <div className={style.infoBtnContainer}>
                             <Button className={style.infoBtn}>Live Version</Button>
                             <Button className={style.infoBtn}> <FontAwesomeIcon icon={faGithub} /> GitHub</Button>
                         </div>

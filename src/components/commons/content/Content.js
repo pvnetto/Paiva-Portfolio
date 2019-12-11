@@ -9,9 +9,9 @@ const Emphasized = ({ children }) => {
     return <span className={style.emphasized}>{children}</span>
 }
 
-const Content = ({ children }) => {
+const Content = ({ children, className }) => {
     return (
-        <div className={style.container}>
+        <div className={`${style.container} ${className}`}>
             {children}
         </div>
     );

@@ -1,3 +1,7 @@
+.projectHeader {
+    margin-right: 5rem;
+}
+
 .filterHeader {
     margin-top: 3rem;
     margin-bottom: 0.3rem;
@@ -13,18 +17,19 @@
 }
 
 .filterBtn {
-    width: 32%;
+    width: 100%;
+    max-width: 32%;
     margin: 0.2rem 0.2rem;
     padding: 0.3rem 0;
 }
 
 .itemContainer {
+    flex: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
     margin-left: auto;
-    max-width: 50%;
 
     transform: translateX(200%);
     animation: enter-anim 0.5s ease;
@@ -39,5 +44,38 @@
     }
     100% {
         transform: translateX(0px);
+    }
+}
+
+@media (max-width: 1280px) {
+    .projectHeader {
+        margin-right: 3rem;
+    }
+}
+
+@media  (max-width: 1024px) {
+    .projectHeader {
+        margin-right: 2rem;
+        max-width: 100%;
+    }
+
+    .itemContainer {
+        width: 100%;
+    }
+
+    .pageContainer .projectHeader, .pageContainer .itemContainer {
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .itemContainer {
+        width: 100%;
+    }
+
+    .filterBtn {
+        max-width: 45%;
+        font-size: 0.9rem;
+        padding: 0.1rem 0;
     }
 }

@@ -59,8 +59,8 @@ const Projects = () => {
     }
 
     return (
-        <Container>
-            <Content>
+        <Container className={style.pageContainer}>
+            <Content className={style.projectHeader}>
                 <Content.Header text={"My Projects"} />
 
                 <TypewriterProvider>

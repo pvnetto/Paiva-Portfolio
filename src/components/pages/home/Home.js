@@ -20,9 +20,9 @@ const Home = () => {
         <Container>
             <div>
                 <div>
-                    <h1 className={style.header}>Hi,</h1>
-                    <h1 className={style.header}>I'm <span className={style.emphasized}>Paiva</span>,</h1>
-                    <h1 className={style.header}>web and game developer</h1>
+                    <h1>Hi,</h1>
+                    <h1>I'm <span className={style.emphasized}>Paiva</span>,</h1>
+                    <h1>web and game developer</h1>
                     <p className={style.lowkey}>Frond End Developer / Game Programmer</p>
                 </div>
                 <div className={style.btnContainer}>
