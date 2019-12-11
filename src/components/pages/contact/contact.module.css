@@ -28,20 +28,6 @@
 
 .contactForm button {
     padding: 0.3rem 1rem;
-    border: 2px solid var(--blue);
-
-    background-color: transparent;
-    color: var(--blue);
-    
-    font-size: 1rem;
-
-    transition: all 0.2s ease;
-}
-
-.contactForm button:hover {
-    background-color: var(--blue);
-    color: var(--font-color);
-    cursor: pointer;
 }
 
 .contactForm input, .contactForm textarea {

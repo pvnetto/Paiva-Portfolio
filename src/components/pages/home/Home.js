@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
-import style from './home.module.css';
+import { Link } from 'react-router-dom';
+
 import Container from '../../commons/container';
 import { useScene } from '../../scenes/SceneContext';
 import Scenes from '../../scenes/Scenes';
+import Button from '../../commons/buttons/Button';
+
+import style from './home.module.css';
 
 const Home = () => {
 
@@ -22,8 +26,13 @@ const Home = () => {
                     <p className={style.lowkey}>Frond End Developer / Game Programmer</p>
                 </div>
                 <div className={style.btnContainer}>
-                    <a className={style.homeBtn} href="">Contact Me</a>
-                    <a className={style.homeBtn} href="">Check My Work</a>
+                    <Button className={style.homeBtn}>
+                        <Link to="/contact">Contact me</Link>
+                    </Button>
+
+                    <Button className={style.homeBtn}>
+                        <Link to="/projects">Check my work</Link>
+                    </Button>
                 </div>
             </div>
         </Container>

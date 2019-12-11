@@ -20,21 +20,11 @@
     width: 35%;
     padding: 1rem 0rem;
     font-size: 1.2rem;
-    border: 2px solid var(--blue);
+}
 
-    background-color: transparent;
-    color: var(--blue);
-
+.homeBtn a {
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
-
-    transition: all 0.2s ease;
-}
-
-.homeBtn:hover {
-    background-color: var(--blue);
-    color: var(--font-color);
-
-    cursor: pointer;
+    color: inherit;
 }

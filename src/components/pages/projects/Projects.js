@@ -12,6 +12,7 @@ import ProjectItem from './item/ProjectItem';
 import ProjectModal from './modal/ProjectModal';
 
 import { categories, techs, projectsInfo } from './info';
+import Button from '../../commons/buttons/Button';
 
 const Projects = () => {
 
@@ -49,6 +50,14 @@ const Projects = () => {
         return true;
     }
 
+    const TechButton = ({ tech, children }) => {
+        return <Button onClick={() => setTechFilter(tech)} active={techFilter === tech} className={style.filterBtn}>{children}</Button>
+    }
+
+    const CategoryButton = ({ category, children }) => {
+        return <Button onClick={() => setCategoryFilter(category)} active={categoryFilter === category} className={style.filterBtn}>{children}</Button>
+    }
+
     return (
         <Container>
             <Content>
@@ -65,20 +74,20 @@ const Projects = () => {
                 <div>
                     <p className={style.filterHeader}>Filter by category:</p>
                     <div className={style.btnsContainer}>
-                        <button onClick={() => setCategoryFilter(categories.ALL)} className={getFilterBtnStyle(categoryFilter, categories.ALL)}>All</button>
-                        <button onClick={() => setCategoryFilter(categories.WEB)} className={getFilterBtnStyle(categoryFilter, categories.WEB)}>Web</button>
-                        <button onClick={() => setCategoryFilter(categories.GAMES)} className={getFilterBtnStyle(categoryFilter, categories.GAMES)}>Games</button>
+                        <CategoryButton category={categories.ALL}>All</CategoryButton>
+                        <CategoryButton category={categories.WEB}>Web</CategoryButton>
+                        <CategoryButton category={categories.GAMES}>Games</CategoryButton>
                     </div>
                 </div>
 
                 <div>
                     <p className={style.filterHeader}>Filter by tech:</p>
                     <div className={style.btnsContainer}>
-                        <button onClick={() => setTechFilter(techs.ALL)} className={getFilterBtnStyle(techFilter, techs.ALL)}>All</button>
-                        <button onClick={() => setTechFilter(techs.JAVASCRIPT)} className={getFilterBtnStyle(techFilter, techs.JAVASCRIPT)}>JavaScript</button>
-                        <button onClick={() => setTechFilter(techs.PYTHON)} className={getFilterBtnStyle(techFilter, techs.PYTHON)}>Python</button>
-                        <button onClick={() => setTechFilter(techs.REACT)} className={getFilterBtnStyle(techFilter, techs.REACT)}>React</button>
-                        <button onClick={() => setTechFilter(techs.UNITY3D)} className={getFilterBtnStyle(techFilter, techs.UNITY3D)}>Unity3D</button>
+                        <TechButton tech={techs.ALL}>All</TechButton>
+                        <TechButton tech={techs.JAVASCRIPT}>JavaScript</TechButton>
+                        <TechButton tech={techs.PYTHON}>Python</TechButton>
+                        <TechButton tech={techs.REACT}>React</TechButton>
+                        <TechButton tech={techs.UNITY3D}>Unity3D</TechButton>
                     </div>
                 </div>
             </Content>

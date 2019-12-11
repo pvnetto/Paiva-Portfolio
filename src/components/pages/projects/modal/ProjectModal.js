@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import style from './project-modal.module.css';
-import { text } from '../../../../../node_modules/@fortawesome/fontawesome-svg-core';
+import Button from '../../../commons/buttons/Button';
 
 const reduceToString = (arr) => {
     if (!arr) return "";
@@ -52,8 +52,8 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, descri
                         </div>
 
                         <div>
-                            <button className={style.infoBtn}>Live Version</button>
-                            <button className={style.infoBtn}> <FontAwesomeIcon icon={faGithub} /> GitHub</button>
+                            <Button className={style.infoBtn}>Live Version</Button>
+                            <Button className={style.infoBtn}> <FontAwesomeIcon icon={faGithub} /> GitHub</Button>
                         </div>
 
                         <div>

@@ -8,6 +8,19 @@
     background: rgba(0, 0, 0, 0.9);
 
     padding: 0 10rem;
+
+    animation: fade-in 0.5s ease;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .closeBtnContainer {
@@ -80,21 +93,6 @@
 
 .infoBtn {
     width: 150px;
-
     margin: 0.2rem 0.2rem;
     padding: 0.5rem 0;
-    border: 2px solid var(--blue);
-
-    background-color: transparent;
-    color: var(--blue);
-    
-    font-size: 1rem;
-
-    transition: all 0.2s ease;
-}
-
-.infoBtn:hover {
-    background-color: var(--blue);
-    color: var(--font-color);
-    cursor: pointer;
 }

@@ -1,0 +1,16 @@
+.btn {
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    color: var(--blue);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+    
+    cursor: pointer;
+}
+
+.btn:hover, .btn.active {
+    background-color: var(--blue);
+    color: var(--font-color-alt);
+    font-weight: 900;
+}

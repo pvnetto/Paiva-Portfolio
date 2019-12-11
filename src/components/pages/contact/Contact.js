@@ -10,6 +10,7 @@ import { useScene } from '../../scenes/SceneContext';
 import Scenes from '../../scenes/Scenes';
 
 import style from './contact.module.css';
+import Button from '../../commons/buttons/Button';
 
 const Contact = () => {
 
@@ -42,7 +43,8 @@ const Contact = () => {
                         <textarea name="message" type="text" placeholder="Message" />
                     </div>
                     <div className={style.btnContainer}>
-                        <button>Send</button>
+                        <Button>Send</Button>
+                        {/* <button>Send</button> */}
                     </div>
                 </form>
             </Content>
