@@ -11,7 +11,7 @@
     "start": "node server.js",
     "build": "webpack --mode production --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "analyze": "source-map-explorer dist/main.*"
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [
     "paiva",
