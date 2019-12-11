@@ -13,6 +13,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "10.15.0"
+  },
   "keywords": [
     "paiva",
     "pvnetto",
