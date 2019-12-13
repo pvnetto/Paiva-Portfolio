@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { extend, useThree, useFrame } from 'react-three-fiber';
 
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';

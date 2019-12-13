@@ -1,17 +1,25 @@
-import React, { useRef } from 'react';
-import { useFrame, useLoader } from 'react-three-fiber';
+import React, { useRef, useState, useEffect } from 'react';
+import { useFrame, useLoader, useThree } from 'react-three-fiber';
 
 import { MeshPhongMaterial, MeshBasicMaterial, Vector3 } from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
+import useResponsivePos from '../useResponsivePos';
+
 import cup from '../../../../public/objs/ufo.obj';
 
 const Ufo = () => {
+    const { size } = useThree();
+
     const meshRef = useRef();
     const sphereRef = useRef();
 
+    // Responsive obj pos parameters
+    const startPos = new Vector3(11, -82, -16);
+    const endPos = new Vector3(7, -80, -16);
+    const centerPos = useResponsivePos(startPos, endPos);
+
     let animationTime = 0;
-    const startPos = new Vector3(7, -84, -16);
     const horizontalMoveMult = 1.3;
     const animationSpeed = 2;
 
@@ -21,7 +29,7 @@ const Ufo = () => {
         const currentSine = Math.sin(animationTime);
         const currentCos = Math.sin(animationTime);
 
-        const currentPos = new Vector3(startPos.x, startPos.y, startPos.z);
+        const currentPos = new Vector3(centerPos.x, centerPos.y, centerPos.z);
         currentPos.x += currentSine * horizontalMoveMult;
         currentPos.y += currentCos;
 

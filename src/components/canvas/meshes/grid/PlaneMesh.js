@@ -22,8 +22,6 @@ const PlaneMesh = () => {
                 planeVertices.push(currentVertex.x, currentVertex.y, currentVertex.z);
             }
 
-            console.log(geomRef.current);
-
             geomRef.current.setAttribute('position', new Float32BufferAttribute(planeVertices, 3));
         }
     });

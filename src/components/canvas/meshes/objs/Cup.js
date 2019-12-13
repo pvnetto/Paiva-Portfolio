@@ -10,6 +10,9 @@ const Cup = () => {
     const meshRef = useRef();
     const sphereRef = useRef();
 
+    // const startPos = [7, -21, -16];
+    const startPos = [1, -21, -16];
+
     useFrame(() => {
         meshRef.current.rotation.y += 0.002;
     });
@@ -23,7 +26,7 @@ const Cup = () => {
     });
 
     return (
-        <mesh ref={meshRef} position={[7, -21, -16]} rotation={[0, 0, 0]} scale={[0.08, 0.08, 0.08]}>
+        <mesh ref={meshRef} position={startPos} rotation={[0, 0, 0]} scale={[0.08, 0.08, 0.08]}>
             <primitive ref={sphereRef} attach="geometry" object={mugObj} />
         </mesh>
     );
