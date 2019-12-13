@@ -42,7 +42,6 @@ const PageCanvas = () => {
     return (
         <Canvas className={style.pageCanvas}>
             <directionalLight color={0xffffff} intensity={1} />
-
             <Effects currentScene={currentScene} />
             <Camera currentScene={currentScene} />
             <CanvasClearColor />

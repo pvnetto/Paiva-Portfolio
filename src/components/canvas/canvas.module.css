@@ -4,3 +4,9 @@
     width: 100% !important;
     height: 100vh!important;
 }
+
+@media (max-width: 600px) {
+    /* .pageCanvas {
+        display: none !important;
+    } */
+}

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import './reset.module.css';
 
 const AppWrapper = () => {
@@ -16,4 +15,4 @@ const AppWrapper = () => {
     )
 }
 
-ReactDOM.render(<AppWrapper />, document.querySelector('#app'));
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));

@@ -29,7 +29,10 @@ h1 {
 p {
     font-size: 1.5rem;
 }
-  
+
+body {
+    background: black;
+}
 
 @media (max-width: 1280px) {}
   
