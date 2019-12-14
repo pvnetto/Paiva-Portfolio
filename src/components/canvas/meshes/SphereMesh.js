@@ -1,14 +1,19 @@
 import React, { useRef } from 'react';
-import { TriangleStripDrawMode } from 'three';
+import { TriangleStripDrawMode, Vector3 } from 'three';
 import { useFrame } from 'react-three-fiber';
+
+import useResponsivePos from './useResponsivePos';
 
 const SphereMesh = () => {
     const meshRef = useRef();
     const sphereRef = useRef();
 
+    const startPos = new Vector3(5, 6, -11);
+    const endPos = new Vector3(5, 7, -11);
+    const currentPos = useResponsivePos(startPos, endPos);
+
     useFrame(() => {
         meshRef.current.rotation.y += 0.005;
-        // meshRef.current.rotation.y += 0.01;
     });
 
     const verticesOfCube = [
@@ -25,11 +30,8 @@ const SphereMesh = () => {
         4, 5, 6, 6, 7, 4
     ];
 
-    // const pos = [5, 6, -11];
-    const pos = [5, 7, -11];
-
     return (
-        <mesh ref={meshRef} position={pos} drawMode={TriangleStripDrawMode}>
+        <mesh ref={meshRef} position={currentPos} drawMode={TriangleStripDrawMode}>
             {/* <sphereGeometry ref={sphereRef} attach="geometry" args={[4.5, 64, 64, 6, Math.random() * 6, Math.random() * 6]} /> */}
             {/* <dodecahedronBufferGeometry ref={sphereRef} attach="geometry" args={[3]} /> */}
             <polyhedronGeometry ref={sphereRef} attach="geometry" args={[verticesOfCube, indicesOfFaces, 3, 2]} />

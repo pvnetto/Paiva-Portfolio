@@ -2,14 +2,18 @@ import React, { useRef } from 'react';
 import { TextureLoader, DoubleSide, Vector3 } from 'three';
 import { useFrame, useLoader } from 'react-three-fiber';
 
+import useResponsivePos from '../useResponsivePos';
+
 const PlaneTexture = ({ textureURL, order }) => {
     const meshRef = useRef();
     const sphereRef = useRef();
 
+    const startCenter = new Vector3(8, -40, -15);
+    const endCenter = new Vector3(1, -40, -15);
+    const center = useResponsivePos(startCenter, endCenter);
+
     const animationRadius = 6;
     const animationSpeed = 1.3;
-    // const center = new Vector3(8, -40, -15);
-    const center = new Vector3(1, -40, -15);
     let animationT = animationSpeed * order;
 
     useFrame((state, delta) => {
