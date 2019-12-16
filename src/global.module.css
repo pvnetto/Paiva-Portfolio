@@ -38,6 +38,26 @@ body {
     background: black;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--sidenav-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--font-color-alt);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--font-color-alt);
+}
+
 @media (max-width: 1280px) {}
   
 @media (max-width: 1024px) {
