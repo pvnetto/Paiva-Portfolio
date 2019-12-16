@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas, useThree } from 'react-three-fiber';
 import { Fog } from 'three';
 
-import PlaneMesh from './meshes/grid/PlaneMesh';
+import TerrainMesh from './meshes/grid/TerrainMesh';
 import SphereMesh from './meshes/SphereMesh';
 import Camera from './camera';
 import Effects from './effects';
@@ -47,7 +47,7 @@ const PageCanvas = () => {
             <CanvasClearColor />
             <CanvasFog />
 
-            <PlaneMesh />
+            <TerrainMesh />
             <SphereMesh />
 
             <ReactLogo />

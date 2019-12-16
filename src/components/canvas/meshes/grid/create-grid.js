@@ -2,54 +2,34 @@ import { Vector3, Face3 } from 'three';
 import perlin from './perlin';
 
 
-const CreateGrid = (offset = 0) => {
+const CreateGrid = (xSize, zSize, offset = 0) => {
     perlin.noise.seed(43132);
 
-    const gridSizeX = 150;
-    const gridSizeZ = 50;
-
     const cellSize = 1;
-    const grid = [];
     const vertices = [];
     const faces = [];
 
-    let cellCountX = Math.ceil(gridSizeX / cellSize);
-    let cellCountZ = Math.ceil(gridSizeZ / cellSize);
+    let cellCountX = Math.ceil(xSize / cellSize);
+    let cellCountZ = Math.ceil(zSize / cellSize);
 
-    const baseX = -0.5 * gridSizeX;
-    const baseZ = -1.03 * gridSizeZ;
+    const baseX = -0.5 * xSize;
+    const baseZ = -1.03 * zSize;
 
     // Render grid
     for (let z = 0; z < cellCountZ; z++) {
         const currentZ = z * cellSize + baseZ;
-        grid[z] = [];
 
         for (let x = 0; x < cellCountX; x++) {
             const currentX = x * cellSize + baseX;
             const currentHeight = perlin.noise.simplex2(z / 6 + offset, x / 6);
-            grid[z].push(new Vector3(currentX, currentHeight, currentZ));
-        }
-    }
 
-    for (let z = 0; z + 1 < grid.length; z++) {
-        const current = grid[z];
-
-        for (let x = 0; x + 1 < current.length; x++) {
-            const arrayPos = ((z * current.length) + x) * 3;
-
-            const vertex1 = grid[z][x];
-            const vertex2 = grid[z + 1][x];
-            const vertex3 = grid[z][x + 1];
-
-            vertices.push(vertex1, vertex2, vertex3);
-            faces.push(new Face3(arrayPos, arrayPos + 1, arrayPos + 2));
+            vertices.push(currentX, currentHeight, currentZ);
         }
     }
 
     return {
         vertices,
-        faces
-    };
+    }
 }
 
 export default CreateGrid;
