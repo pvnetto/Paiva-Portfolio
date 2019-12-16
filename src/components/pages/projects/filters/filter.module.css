@@ -1,0 +1,29 @@
+.filterHeader {
+    margin-top: 3rem;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.btnsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    width: 100%;
+    max-width: 32%;
+    margin: 0.2rem 0.2rem;
+    padding: 0.3rem 0;
+}
+
+
+@media (max-width: 767px) {
+    .filterBtn {
+        max-width: 45%;
+        font-size: 0.9rem;
+        padding: 0.1rem 0;
+    }
+}

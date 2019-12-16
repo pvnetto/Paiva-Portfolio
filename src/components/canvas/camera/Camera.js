@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useThree, useFrame } from 'react-three-fiber';
 import { Euler, Vector3, Quaternion } from 'three';
+
 import Scenes from '../../scenes/Scenes';
 
 const CameraRigs = (scene) => {
@@ -71,6 +73,10 @@ const Camera = ({ currentScene }) => {
     });
 
     return <></>
+}
+
+Camera.propTypes = {
+    currentScene: PropTypes.oneOf(Object.values(Scenes)).isRequired,
 }
 
 export default Camera;

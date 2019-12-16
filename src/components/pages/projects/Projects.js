@@ -6,38 +6,30 @@ import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 
 import style from './projects.module.css';
-import { useScene } from '../../scenes/SceneContext';
 import Scenes from '../../scenes/Scenes';
 import ProjectItem from './item/ProjectItem';
 import ProjectModal from './modal/ProjectModal';
 
 import { categories, techs, projectsInfo } from './info';
-import Button from '../../commons/buttons/Button';
+import CategoryFilter from './filters/CategoryFilter';
+import TechFilter from './filters/TechFilter';
+import useSceneChange from '../../scenes/useSceneChange';
 
 const Projects = () => {
 
-    const { setScene } = useScene();
     const [showInfoModal, setShowInfoModal] = useState(false);
-    const [modalData, setModalData] = useState({});
+    const [modalData, setModalData] = useState(projectsInfo[0]);
 
     const [categoryFilter, setCategoryFilter] = useState(categories.ALL);
     const [techFilter, setTechFilter] = useState(techs.ALL);
 
-    useEffect(() => {
-        setScene(Scenes.PROJECTS);
+    const { currentScene } = useSceneChange(Scenes.PROJECTS);
 
+    useEffect(() => {
         return () => {
             setShowInfoModal(false);
         }
     }, []);
-
-
-    const openInfoModal = (projectInfo) => {
-        setShowInfoModal(true);
-        setModalData({ ...projectInfo });
-    }
-
-    const getFilterBtnStyle = (currentFilter, filter) => `${style.filterBtn} ${currentFilter === filter ? style.active : ''}`;
 
     const isProjectFiltered = (projectInfo) => {
         if (categoryFilter !== categories.ALL && projectInfo.category !== categoryFilter) {
@@ -50,12 +42,9 @@ const Projects = () => {
         return false;
     }
 
-    const TechButton = ({ tech, children }) => {
-        return <Button onClick={() => setTechFilter(tech)} active={techFilter === tech} className={style.filterBtn}>{children}</Button>
-    }
-
-    const CategoryButton = ({ category, children }) => {
-        return <Button onClick={() => setCategoryFilter(category)} active={categoryFilter === category} className={style.filterBtn}>{children}</Button>
+    const openInfoModal = (projectInfo) => {
+        setShowInfoModal(true);
+        setModalData({ ...projectInfo });
     }
 
     return (
@@ -71,25 +60,8 @@ const Projects = () => {
                     </TypewriterParagraph>
                 </TypewriterProvider>
 
-                <div>
-                    <p className={style.filterHeader}>Filter by category:</p>
-                    <div className={style.btnsContainer}>
-                        <CategoryButton category={categories.ALL}>All</CategoryButton>
-                        <CategoryButton category={categories.WEB}>Web</CategoryButton>
-                        <CategoryButton category={categories.GAMES}>Games</CategoryButton>
-                    </div>
-                </div>
-
-                <div>
-                    <p className={style.filterHeader}>Filter by tech:</p>
-                    <div className={style.btnsContainer}>
-                        <TechButton tech={techs.ALL}>All</TechButton>
-                        <TechButton tech={techs.JAVASCRIPT}>JavaScript</TechButton>
-                        <TechButton tech={techs.PYTHON}>Python</TechButton>
-                        <TechButton tech={techs.REACT}>React</TechButton>
-                        <TechButton tech={techs.UNITY3D}>Unity3D</TechButton>
-                    </div>
-                </div>
+                <CategoryFilter setCategoryFilter={setCategoryFilter} activeCategory={categoryFilter} />
+                <TechFilter setTechFilter={setTechFilter} activeTech={techFilter} />
             </Content>
 
             <div className={style.itemContainer}>

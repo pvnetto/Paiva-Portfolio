@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Container from '../../commons/container';
-import { useScene } from '../../scenes/SceneContext';
+import useSceneChange from '../../scenes/useSceneChange';
 import Scenes from '../../scenes/Scenes';
 import Button from '../../commons/buttons/Button';
 
@@ -10,11 +10,7 @@ import style from './home.module.css';
 
 const Home = () => {
 
-    const { setScene } = useScene();
-
-    useEffect(() => {
-        setScene(Scenes.HOME);
-    }, []);
+    const { currentScene } = useSceneChange(Scenes.HOME);
 
     return (
         <Container>

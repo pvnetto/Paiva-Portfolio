@@ -1,9 +1,16 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
+
 import style from './content.module.css';
 import GlitchHeader from '../headers/GlitchHeader';
 
 const Header = ({ text }) => {
     return <GlitchHeader text={text} className={style.header}>{text}</GlitchHeader>
+}
+
+Header.propTypes = {
+    text: PropTypes.string.isRequired,
 }
 
 const Emphasized = ({ children }) => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import itemImg from '../../../../public/images/terrain_wire.png';
 
@@ -16,5 +17,11 @@ const ProjectItem = ({ projectInfo, openModal, hidden }) => {
         </div>
     );
 };
+
+ProjectItem.propTypes = {
+    projectInfo: PropTypes.object.isRequired,
+    openModal: PropTypes.func.isRequired,
+    hidden: PropTypes.bool.isRequired,
+}
 
 export default ProjectItem;

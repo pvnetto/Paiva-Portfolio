@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { extend, useThree, useFrame } from 'react-three-fiber';
+import PropTypes from 'prop-types';
 
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass';
 import { BloomPass } from 'three/examples/jsm/postprocessing/BloomPass';
 import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass';
+import Scenes from '../../scenes/Scenes';
 extend({ EffectComposer, RenderPass, GlitchPass, BloomPass, FilmPass })
 
 const Effects = ({ currentScene }) => {
@@ -41,6 +43,10 @@ const Effects = ({ currentScene }) => {
             <filmPass attachArray="passes" args={[0.35, 0.025, 648, false]} renderToScreen />
         </effectComposer>
     )
+}
+
+Effects.propTypes = {
+    currentScene: PropTypes.oneOf(Object.values(Scenes)).isRequired,
 }
 
 export default Effects;

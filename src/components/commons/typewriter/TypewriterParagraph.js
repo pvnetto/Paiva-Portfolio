@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useTypewriter } from './TypewriterContext';
+import PropTypes from 'prop-types';
 
+import { useTypewriter } from './TypewriterContext';
 import BlinkCaret from '../caret/BlinkCaret';
 
-const TypewriterParagraph = ({ children, order, typeCyclesPerSecond = 20, charactersPerCycle = 12 }) => {
+const TypewriterParagraph = ({ children, order = 0, typeCyclesPerSecond = 20, charactersPerCycle = 20 }) => {
     const [currentText, setCurrentText] = useState("");
     const [characters, setCharacters] = useState([]);
     const [isTyping, setIsTyping] = useState(false);
@@ -46,6 +47,12 @@ const TypewriterParagraph = ({ children, order, typeCyclesPerSecond = 20, charac
             <p style={{ visibility: 'hidden' }}>{children}</p>
         </div>
     )
+}
+
+TypewriterParagraph.propTypes = {
+    order: PropTypes.number.isRequired,
+    typeCyclesPerSecond: PropTypes.number,
+    charactersPerCycle: PropTypes.number
 }
 
 export default TypewriterParagraph;

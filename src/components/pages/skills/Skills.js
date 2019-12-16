@@ -5,16 +5,12 @@ import Container from '../../commons/container';
 
 import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
-import { useScene } from '../../scenes/SceneContext';
 import Scenes from '../../scenes/Scenes';
+import useSceneChange from '../../scenes/useSceneChange';
 
 const Skills = () => {
 
-    const { setScene } = useScene();
-
-    useEffect(() => {
-        setScene(Scenes.SKILLS);
-    }, [])
+    const { currentScene } = useSceneChange(Scenes.SKILLS);
 
     return (
         <Container>

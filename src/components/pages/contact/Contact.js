@@ -6,7 +6,7 @@ import Container from '../../commons/container';
 import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 
-import { useScene } from '../../scenes/SceneContext';
+import useSceneChange from '../../scenes/useSceneChange';
 import Scenes from '../../scenes/Scenes';
 
 import style from './contact.module.css';
@@ -14,11 +14,7 @@ import Button from '../../commons/buttons/Button';
 
 const Contact = () => {
 
-    const { setScene } = useScene();
-
-    useEffect(() => {
-        setScene(Scenes.CONTACT);
-    }, []);
+    const { currentScene } = useSceneChange(Scenes.CONTACT);
 
     return (
         <Container>

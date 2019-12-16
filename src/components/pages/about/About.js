@@ -4,18 +4,12 @@ import Container from '../../commons/container';
 import Content from '../../commons/content';
 import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
-import { useScene } from '../../scenes/SceneContext';
+import useSceneChange from '../../scenes/useSceneChange';
 import Scenes from '../../scenes/Scenes';
-
-import style from './about.module.css';
 
 const About = () => {
 
-    const { setScene } = useScene();
-
-    useEffect(() => {
-        setScene(Scenes.ABOUT);
-    }, []);
+    const { currentScene } = useSceneChange(Scenes.ABOUT);
 
     return (
         <Container>

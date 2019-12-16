@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -64,5 +66,15 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, descri
         </>
     );
 };
+
+ProjectModal.propTypes = {
+    show: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    techs: PropTypes.arrayOf(PropTypes.string).isRequired,
+    roles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string).isRequired
+}
 
 export default ProjectModal;
