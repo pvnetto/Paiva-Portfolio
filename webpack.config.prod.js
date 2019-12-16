@@ -4,9 +4,9 @@ module.exports = {
     ...baseConfig,
     mode: 'production',
     // devtool: '',
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all',
-    //     }
-    // }
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        }
+    }
 }
