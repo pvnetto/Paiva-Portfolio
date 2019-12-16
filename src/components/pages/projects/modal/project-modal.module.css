@@ -12,6 +12,8 @@
 
     animation: fade-in 0.5s ease;
     animation-fill-mode: forwards; 
+
+    transform: translateZ(1px);
 }
 
 @keyframes fade-in {
