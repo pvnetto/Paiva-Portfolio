@@ -60,7 +60,7 @@ const Projects = () => {
 
     return (
         <Container className={style.pageContainer}>
-            <Content className={style.projectHeader}>
+            <Content className={`${style.projectHeader} ${showInfoModal ? style.modalOpen : ''}`}>
                 <Content.Header text={"My Projects"} />
 
                 <TypewriterProvider>

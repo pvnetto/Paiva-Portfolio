@@ -19,7 +19,7 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, descri
     return (
         <>
             {show ?
-                <div onTouchMove={(e) => e.stopPropagation()} className={style.infoContainer}>
+                <div className={style.infoContainer}>
                     <div className={style.closeBtnContainer}>
                         <div onClick={handleClose} className={style.closeBtn}>
                             <div></div>

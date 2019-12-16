@@ -2,6 +2,11 @@
     margin-right: 5rem;
 }
 
+.modalOpen {
+    overflow: hidden;
+    position: fixed;
+}
+
 .filterHeader {
     margin-top: 3rem;
     margin-bottom: 0.3rem;
