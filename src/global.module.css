@@ -47,6 +47,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    :root {
+        --sidenav-width: 0px;
+    }
+
     h1 {
         font-size: 2.5rem;
     }

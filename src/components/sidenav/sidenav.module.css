@@ -40,3 +40,30 @@
 .socialMediaBtn:hover {
     color: var(--blue);
 }
+
+@media (max-width: 767px) {
+    .sidenav {
+        width: 100%;
+        height: 45px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        min-width: 45px;
+        text-align: center;
+    }
+
+    .sidenavBtnsContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socialMediaBtn {
+        margin: 0.5rem;
+    }
+}

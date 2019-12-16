@@ -117,13 +117,14 @@
 
 @media (max-width: 767px) {
     .infoContainer {
-        padding: 0 2rem;
+        padding: 2rem;
+        margin-top: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     .infoContainer {
-        padding: 0 1rem;
+        padding: 1rem;
     }
 
     .infoBtn {

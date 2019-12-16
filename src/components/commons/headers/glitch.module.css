@@ -8,7 +8,7 @@
     transform: translateX(2px);
     text-shadow: -1px 0 red;
 
-    background: black;
+    /* background: black; */
 
     clip-path: rect(44px, 450px, 56px, 0);
 
@@ -19,7 +19,7 @@
     transform: translateX(-2px);
     text-shadow: -1px 0 blue;
 
-    background: black;
+    /* background: black; */
 
     animation: noise-anim-copy 1s infinite linear alternate-reverse;
 }

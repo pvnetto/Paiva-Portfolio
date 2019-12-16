@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './reset.module.css';
+import './global.module.css';
 
 const AppWrapper = () => {
     return (

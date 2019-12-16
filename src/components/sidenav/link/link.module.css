@@ -34,3 +34,15 @@
 .sidenavBtn.active {
     color: var(--blue);
 }
+
+@media (max-width: 767px) {
+    .sidenavBtn {
+        margin: 0.5rem;
+    
+        font-size: 1.3rem;
+    }
+
+    .sidenavBtn p {
+        font-size: 0.7rem;
+    }
+}
