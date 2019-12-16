@@ -1,8 +1,9 @@
 import React from 'react';
 import style from './content.module.css';
+import GlitchHeader from '../headers/GlitchHeader';
 
 const Header = ({ text }) => {
-    return <h1 data-text={text} className={`${style.header} ${style.glitch}`}>{text}</h1>
+    return <GlitchHeader text={text} className={style.header}>{text}</GlitchHeader>
 }
 
 const Emphasized = ({ children }) => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCode, faFistRaised, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -11,9 +12,7 @@ const Sidenav = () => {
 
     return (
         <div className={style.sidenav}>
-            <div>
-                <p>P</p>
-            </div>
+            <Link className={style.logo} to="/"><p>P</p></Link>
             <div className={style.sidenavBtnsContainer}>
                 <SidenavLink title={"Home"} to={"/"} icon={faHome} />
                 <SidenavLink title={"About"} to={"/about"} icon={faUser} />

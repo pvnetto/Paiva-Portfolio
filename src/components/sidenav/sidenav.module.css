@@ -22,9 +22,21 @@
     margin: 1rem 0rem;
 }
 
+.logo {
+    color: var(--font-color);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--blue);
+}
+
 .socialMediaBtn {
     margin: 0.5rem 0rem;
     color: var(--font-color-alt);
-
     font-size: 1rem;
+}
+
+.socialMediaBtn:hover {
+    color: var(--blue);
 }

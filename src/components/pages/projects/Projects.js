@@ -41,13 +41,13 @@ const Projects = () => {
 
     const isProjectFiltered = (projectInfo) => {
         if (categoryFilter !== categories.ALL && projectInfo.category !== categoryFilter) {
-            return false;
+            return true;
         }
         if (techFilter !== techs.ALL && !projectInfo.techs.includes(techFilter)) {
-            return false;
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     const TechButton = ({ tech, children }) => {
@@ -94,7 +94,8 @@ const Projects = () => {
 
             <div className={style.itemContainer}>
                 {projectsInfo.map(project => {
-                    return isProjectFiltered(project) ? <ProjectItem key={project.id} projectInfo={project} openModal={openInfoModal} /> : null;
+                    const isHidden = isProjectFiltered(project);
+                    return <ProjectItem key={project.id} projectInfo={project} openModal={openInfoModal} hidden={isHidden} />;
                 })}
             </div>
 
