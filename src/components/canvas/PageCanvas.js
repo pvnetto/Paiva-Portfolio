@@ -41,32 +41,34 @@ const PageCanvas = () => {
 
     return (
         <Canvas className={style.pageCanvas}>
-            <directionalLight color={0xffffff} intensity={1} />
-            <Effects currentScene={currentScene} />
-            <Camera currentScene={currentScene} />
-            <CanvasClearColor />
-            <CanvasFog />
-
-            <TerrainMesh />
-            <SphereMesh />
-
-            <ReactLogo />
-            <UnityLogo />
-            <JSLogo />
-            <HTMLLogo />
-            <CSSLogo />
-
-            <mesh rotation={[90, 0, 0]} position={[7, -100, -16]} >
-                <planeBufferGeometry attach="geometry" args={[120, 120, 50, 50]} />
-                <meshBasicMaterial attach="material" wireframe color="green" />
-            </mesh>
-
             <Suspense fallback={<SphereMesh />}>
+                <directionalLight color={0xffffff} intensity={1} />
+                <Effects currentScene={currentScene} />
+                <Camera currentScene={currentScene} />
+                <CanvasClearColor />
+                <CanvasFog />
+
+                <TerrainMesh position={[0, 0, 0]} />
+                <SphereMesh />
+
+                <ReactLogo />
+                <UnityLogo />
+                <JSLogo />
+                <HTMLLogo />
+                <CSSLogo />
+
+                <Cup />
+                <Ufo />
+
+                {/* <Suspense fallback={<SphereMesh />}>
                 <Cup />
             </Suspense>
 
             <Suspense fallback={<SphereMesh />}>
                 <Ufo />
+            </Suspense> */}
+
+                <TerrainMesh position={[0, -97, -17.5]} />
             </Suspense>
         </Canvas>
     );
