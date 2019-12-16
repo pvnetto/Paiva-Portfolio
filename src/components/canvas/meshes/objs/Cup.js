@@ -19,7 +19,7 @@ const Cup = () => {
         meshRef.current.rotation.y += 0.002;
     });
 
-    const [mugObj] = useLoader(OBJLoader, cup);
+    const mugObj = useLoader(OBJLoader, cup);
 
     mugObj.traverse((node) => {
         if (node.material) {

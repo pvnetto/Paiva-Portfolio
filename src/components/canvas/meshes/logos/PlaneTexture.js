@@ -26,7 +26,7 @@ const PlaneTexture = ({ textureURL, order }) => {
         meshRef.current.position.set(currentPos.x, currentPos.y, currentPos.z);
     });
 
-    const [texture] = useLoader(TextureLoader, textureURL);
+    const texture = useLoader(TextureLoader, textureURL);
 
     return (
         <mesh ref={meshRef} rotation={[0, 0, 0]}>

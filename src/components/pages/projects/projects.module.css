@@ -40,6 +40,8 @@
     animation: enter-anim 0.5s ease;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;      /* Specifies the style for the animation when it's not playing */
+
+    min-height: 50%;                    /* Forces header and item container to stay in place when items are hidden */
 }
 
 
