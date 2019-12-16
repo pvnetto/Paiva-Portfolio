@@ -26,13 +26,13 @@ const Home = () => {
                     <p className={style.lowkey}>Frond End Developer / Game Programmer</p>
                 </div>
                 <div className={style.btnContainer}>
-                    <Button className={style.homeBtn}>
-                        <Link to="/contact">Contact me</Link>
-                    </Button>
+                    <Link className={style.homeBtn} to="/contact">
+                        <Button>Contact me</Button>
+                    </Link>
 
-                    <Button className={style.homeBtn}>
-                        <Link to="/projects">Check my work</Link>
-                    </Button>
+                    <Link className={style.homeBtn} to="/projects">
+                        <Button>Check my work</Button>
+                    </Link>
                 </div>
             </div>
         </Container>

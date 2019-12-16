@@ -17,15 +17,17 @@
 
 .homeBtn {
     width: 35%;
-    padding: 1rem 0rem;
-    font-size: 1.2rem;
-}
-
-.homeBtn a {
+    
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
     color: inherit;
+}
+
+.homeBtn button {
+    width: 100%;
+    padding: 1rem 0rem;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 1280px) {
