@@ -9,13 +9,15 @@ import Contact from '../pages/contact';
 
 const AppRoutes = () => {
     return (
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/skills" component={Skills} />
-            <Route path="/projects" component={Projects} />
-            <Route exact path="/contact" component={Contact} />
-        </Switch>
+        <>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/skills" component={Skills} />
+                <Route path="/projects" component={Projects} />
+                <Route exact path="/contact" component={Contact} />
+            </Switch>
+        </ >
     );
 };
 

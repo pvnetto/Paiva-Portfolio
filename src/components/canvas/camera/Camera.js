@@ -50,6 +50,7 @@ const Camera = ({ currentScene }) => {
 
     useEffect(() => {
         const currentRig = CameraRigs(currentScene);
+
         setStartPos(targetPos || currentRig.pos);
         setStartRot(targetRot || currentRig.rot);
 
@@ -64,7 +65,7 @@ const Camera = ({ currentScene }) => {
             animationT = Math.min(animationT, 1.0);
 
             const newPos = new Vector3(camera.position.x, camera.position.y, camera.position.z).lerpVectors(startPos, targetPos, animationT);
-            camera.position.set(newPos.x, newPos.y, newPos.z);//lerpVectors(startPos, targetPos, animationT);
+            camera.position.set(newPos.x, newPos.y, newPos.z);
 
             const currentRot = new Quaternion();
             Quaternion.slerp(startRot, targetRot, currentRot, animationT);

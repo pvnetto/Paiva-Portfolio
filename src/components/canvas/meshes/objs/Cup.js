@@ -11,7 +11,7 @@ const Cup = () => {
     const meshRef = useRef();
     const sphereRef = useRef();
 
-    const startPos = new Vector3(7, -21, -16);
+    const startPos = new Vector3(9, -21, -16);
     const endPos = new Vector3(1, -21, -16);
     const currentPos = useResponsivePos(startPos, endPos);
 
