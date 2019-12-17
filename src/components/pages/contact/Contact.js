@@ -22,8 +22,8 @@ const Contact = () => {
                 <Content.Header text={"Contact Me"} />
                 <TypewriterProvider>
                     <TypewriterParagraph order={0}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam at ligula finibus, laoreet lectus et, placerat urna.
+                        I'm currently available for work. If you're interested in working with me
+                        please send a message, I'd love to hear about your projects!
                     </TypewriterParagraph>
                 </TypewriterProvider>
 
@@ -40,7 +40,6 @@ const Contact = () => {
                     </div>
                     <div className={style.btnContainer}>
                         <Button>Send</Button>
-                        {/* <button>Send</button> */}
                     </div>
                 </form>
             </Content>

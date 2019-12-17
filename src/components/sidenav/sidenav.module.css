@@ -25,6 +25,7 @@
 .logo {
     color: var(--font-color);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .logo:hover {
@@ -54,7 +55,7 @@
 
     .logo {
         min-width: 45px;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .sidenavBtnsContainer {

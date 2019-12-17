@@ -18,14 +18,14 @@ const Skills = () => {
                 <Content.Header text={"My Skills"} />
                 <TypewriterProvider>
                     <TypewriterParagraph order={0}>
-                        Lorem ipsum dolor sit amet, consectetur elit.
-                            Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat orci convallis sed.
-                            Maecenas faucibus leo a consectetur egestas.
+                        My main areas of expertise are front-end development and game programming, but I have some experience with machine learning
+                        (namely Reinforcement Learning) and some knowledge in back-end programming.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={1}>
-                        Lorem ipsum dolor sit amet, consectetur elit.
-                            Etiam at ligula finibus, laoreet lectus et, placerat urna. Donec maximus sollicitudin neque, non consequat orci convallis sed.
-                            Maecenas faucibus leo a consectetur egestas.
+                        My favorite technologies for front-end development are Javascript (ES6), React, Redux, NextJS, Bootstrap 4, SASS,
+                        Webpack and ThreeJS. For game development, I usually work with Unity3D (C#) and Unreal Engine 4 (C++/Blueprint),
+                        and my main expertise is in gameplay, AI and graphics programming. Beyond that, I also have knowledge in Python
+                        and some of its machine learning frameworks, such as Tensorflow and Keras.
                     </TypewriterParagraph>
                 </TypewriterProvider>
             </Content>
