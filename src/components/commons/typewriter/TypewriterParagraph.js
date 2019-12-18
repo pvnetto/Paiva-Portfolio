@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useTypewriter } from './TypewriterContext';
 import BlinkCaret from '../caret/BlinkCaret';
 
-const TypewriterParagraph = ({ children, order = 0, typeCyclesPerSecond = 20, charactersPerCycle = 20 }) => {
+const TypewriterParagraph = ({ children, order = 0, typeCyclesPerSecond = 10, charactersPerCycle = 50 }) => {
     const [currentText, setCurrentText] = useState("");
     const [characters, setCharacters] = useState([]);
     const [isTyping, setIsTyping] = useState(false);

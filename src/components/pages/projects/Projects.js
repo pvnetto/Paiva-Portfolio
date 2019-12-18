@@ -63,9 +63,9 @@ const Projects = () => {
             </Content>
 
             <div className={style.itemContainer}>
-                {projectsInfo.map(project => {
+                {projectsInfo.map((project, idx) => {
                     const isHidden = isProjectFiltered(project);
-                    return <ProjectItem key={project.id} projectInfo={project} openModal={openInfoModal} hidden={isHidden} />;
+                    return <ProjectItem key={idx} projectInfo={project} openModal={openInfoModal} hidden={isHidden} />;
                 })}
             </div>
 

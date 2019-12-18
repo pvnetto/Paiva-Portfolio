@@ -17,10 +17,10 @@ const About = () => {
                 <Content.Header text={"About Me"} />
                 <TypewriterProvider>
                     <TypewriterParagraph order={0}>
-                        My name is Paiva, I'm a 23 y/o front-end developer and game programmer based in Natal/RN, Brazil.
-                            I'm an Information Technology graduate from UFRN (Federal University of Rio Grande do Norte),
-                            but even though I learned a lot in college, most of my programming knowledge is self-taught as
-                            I love learning new technologies and working on new projects.
+                        Hi, I'm Paiva, a 23 y/o front-end developer and game programmer based in Natal/RN, Brazil.
+                             I hold a bachelor's degree in Information Technology from UFRN (Federal University of Rio Grande do Norte),
+                             and even though I learned a lot in college, I love learning new technologies, so most of my programming
+                             knowledge is self-taught.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={1}>
                         Some of my passions are: Coffee, my cat, playing competitive games, learning new stuff, and working really hard on new projects with

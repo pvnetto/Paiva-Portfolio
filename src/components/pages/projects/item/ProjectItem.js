@@ -9,7 +9,7 @@ const ProjectItem = ({ projectInfo, openModal, hidden }) => {
 
     return (
         <div onClick={() => openModal(projectInfo)} className={`${style.item} ${hidden ? style.hidden : ''}`}>
-            <img src={itemImg} alt="" />
+            <img src={projectInfo.thumbnail || itemImg} alt="" />
 
             <div className={style.tooltip}>
                 <p>Click for more info</p>

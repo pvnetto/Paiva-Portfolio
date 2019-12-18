@@ -16,7 +16,7 @@ const reduceToString = (arr) => {
     }, "");
 }
 
-const ProjectModal = ({ show, handleClose, title, category, techs, roles, description }) => {
+const ProjectModal = ({ show, handleClose, title, category, techs, roles, links, description, images }) => {
 
     return (
         <>
@@ -54,12 +54,18 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, descri
                         </div>
 
                         <div className={style.infoBtnContainer}>
-                            <Button className={style.infoBtn}>Live Version</Button>
-                            <Button className={style.infoBtn}> <FontAwesomeIcon icon={faGithub} /> GitHub</Button>
+                            {links.live ?
+                                <a href={links.live}>
+                                    <Button className={style.infoBtn}>Live Version</Button>
+                                </a> : null}
+                            {links.github ?
+                                <a href={links.github}>
+                                    <Button className={style.infoBtn}> <FontAwesomeIcon icon={faGithub} /> GitHub</Button>
+                                </a> : null}
                         </div>
 
                         <div>
-                            <img src="" alt="" />
+                            {images && images.map((img, idx) => <img className={style.infoImg} key={idx} src={img} alt="" />)}
                         </div>
                     </div>
                 </div> : null}
@@ -74,7 +80,8 @@ ProjectModal.propTypes = {
     category: PropTypes.string.isRequired,
     techs: PropTypes.arrayOf(PropTypes.string).isRequired,
     roles: PropTypes.arrayOf(PropTypes.string).isRequired,
-    description: PropTypes.arrayOf(PropTypes.string).isRequired
+    links: PropTypes.objectOf(PropTypes.string).isRequired,
+    description: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default ProjectModal;

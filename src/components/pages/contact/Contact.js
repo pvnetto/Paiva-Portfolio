@@ -22,7 +22,7 @@ const Contact = () => {
                 <Content.Header text={"Contact Me"} />
                 <TypewriterProvider>
                     <TypewriterParagraph order={0}>
-                        I'm currently available for work. If you're interested in working with me
+                        I'm currently available for work. If you're interested in working with me,
                         please send a message, I'd love to hear about your projects!
                     </TypewriterParagraph>
                 </TypewriterProvider>
