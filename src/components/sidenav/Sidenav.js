@@ -12,7 +12,10 @@ const Sidenav = () => {
 
     return (
         <div className={style.sidenav}>
-            <Link className={style.logo} to="/"><p>P</p></Link>
+            <Link className={style.logo} to="/">
+                <p style={{ margin: '0' }}>P</p>
+                <p style={{ fontSize: '0.7rem', margin: '0' }}>Paiva</p>
+            </Link>
             <div className={style.sidenavBtnsContainer}>
                 <SidenavLink title={"Home"} to={"/"} icon={faHome} />
                 <SidenavLink title={"About"} to={"/about"} icon={faUser} />

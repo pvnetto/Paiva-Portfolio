@@ -1,8 +1,8 @@
 .sidenavBtn {
-    margin: 0.5rem 0rem;
+    margin: 0.8rem 0rem;
     color: var(--font-color-alt);
 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: none;
 
     display: flex;

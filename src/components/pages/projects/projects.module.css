@@ -58,6 +58,10 @@
 }
 
 @media (max-width: 767px) {
+    .pageContainer > div {
+        align-items: flex-start;
+    }
+    
     .itemContainer {
         width: 100%;
     }

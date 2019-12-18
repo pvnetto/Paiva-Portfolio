@@ -59,11 +59,6 @@ const PageCanvas = () => {
 
                 <Cup />
                 <Ufo />
-
-                <mesh position={[0, 0, 0]}>
-                    {/* <textGeometry attach="geometry" /> */}
-                    <meshBasicMaterial attach="material" color="green" wireframe />
-                </mesh>
             </Suspense>
         </Canvas>
     );
