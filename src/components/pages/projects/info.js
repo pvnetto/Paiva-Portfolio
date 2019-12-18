@@ -92,7 +92,7 @@ export const projectsInfo = [
             for the best 3 games chosen by the jury.`,
 
             `In Grand Roçoio the player takes the role of a Cangaço leader. Its objective is to organize his troops to fight against other Cangaço groups,
-            and to do so, the player must hire characters, which can be done by using resources acquired from winning fights. When the player acquires two
+            and to do so, the player must hire characters using resources that can be acquired by winning fights. When the player acquires two
             equal units, he can mix them together to make a more powerful, evolved one.`,
         ],
         images: grandRocoioImages,
@@ -193,7 +193,7 @@ export const projectsInfo = [
             `URNAI Tools is a modular Deep Reinforcement Learning library that supports multiple environments, such as PySC2, OpenAI Gym, 
             and PyGame Learning Environment.`,
 
-            `he main goal of URNAI Tools is to provide an easy way to develop DRL agents in a way that allows the developer to reuse as much 
+            `The main goal of URNAI Tools is to provide an easy way to develop DRL agents in a way that allows the developer to reuse as much 
             code as possible when developing different agents, and that also allows him to reuse previously implemented models in different 
             environments and to integrate new environments easily when necessary. The main advantage of using URNAI Tools is that the models 
             you make for one environment will also work in other environments, so you can prototype new agents for different environments very easily.`
