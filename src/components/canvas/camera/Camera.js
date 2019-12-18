@@ -72,7 +72,7 @@ const Camera = ({ currentScene }) => {
             camera.setRotationFromQuaternion(currentRot);
         }
         else {
-            // Handles the case where rerendering the Camera would 
+            // Handles the case where re-rendering the Camera component would reset the animation
             if (targetPos !== startPos) {
                 setStartPos(targetPos);
                 setStartRot(targetRot);

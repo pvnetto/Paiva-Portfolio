@@ -48,29 +48,30 @@ const Projects = () => {
     }
 
     return (
-        <Container className={style.pageContainer}>
-            <Content className={`${style.projectHeader} ${showInfoModal ? style.modalOpen : ''}`}>
-                <Content.Header text={"My Projects"} />
+        <>
+            <Container className={`${style.pageContainer} ${showInfoModal ? style.modalOpen : ''}`}>
+                <Content className={`${style.projectHeader}`}>
+                    <Content.Header text={"My Projects"} />
 
-                <TypewriterProvider>
-                    <TypewriterParagraph order={0}>
-                        Here are some of my favorite/most recent projects. You can find the code for most of them (and many other) on my Github.
+                    <TypewriterProvider>
+                        <TypewriterParagraph order={0}>
+                            Here are some of my favorite/most recent projects. You can find the code for most of them (and many other) on my Github.
                     </TypewriterParagraph>
-                </TypewriterProvider>
+                    </TypewriterProvider>
 
-                <CategoryFilter setCategoryFilter={setCategoryFilter} activeCategory={categoryFilter} />
-                <TechFilter setTechFilter={setTechFilter} activeTech={techFilter} />
-            </Content>
+                    <CategoryFilter setCategoryFilter={setCategoryFilter} activeCategory={categoryFilter} />
+                    <TechFilter setTechFilter={setTechFilter} activeTech={techFilter} />
+                </Content>
 
-            <div className={style.itemContainer}>
-                {projectsInfo.map((project, idx) => {
-                    const isHidden = isProjectFiltered(project);
-                    return <ProjectItem key={idx} projectInfo={project} openModal={openInfoModal} hidden={isHidden} />;
-                })}
-            </div>
-
+                <div className={style.itemContainer}>
+                    {projectsInfo.map((project, idx) => {
+                        const isHidden = isProjectFiltered(project);
+                        return <ProjectItem key={idx} projectInfo={project} openModal={openInfoModal} hidden={isHidden} />;
+                    })}
+                </div>
+            </Container>
             <ProjectModal {...modalData} show={showInfoModal} handleClose={() => setShowInfoModal(false)} />
-        </Container>
+        </>
     );
 };
 

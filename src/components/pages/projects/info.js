@@ -64,12 +64,13 @@ export const projectsInfo = [
             instagram: 'https://www.instagram.com/chama_jogo/'
         },
         description: [
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod suscipit velit, ut condimentum arcu fermentum in.
-            Quisque egestas facilisis ante et convallis. Pellentesque a nunc in ligula placerat consectetur.`,
+            `Chama! is a mobile rhythm game series about brazilian music styles. The first title 'Bailão' is about funk and bregafunk,
+            which are currently two of the most popular styles in Brazil.`,
 
-            `In luctus ac ex vel sollicitudin. Aenean in tortor vel nulla efficitur efficitur sit amet ut orci.
-            Sed dignissim diam purus, vel aliquam erat tincidunt at. In a orci nunc. Praesent nec risus sit amet
-            justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.`
+            `The player uses both thumbs to press and drag shown symbols in a sequence following the rhythm of the songs as your avatar 
+            dances accordingly. Different from other games which offer a linear path and a few short free movement sections, 'Chama! Bailão' 
+            often gives the player the option to follow one three paths of movement, each one with a different difficulty and resulting in different dance moves. 
+            The player can change to other paths during the playthrough at the given moments so the difficulty is dynamic.`
             ,
         ],
         images: chamaImages,
