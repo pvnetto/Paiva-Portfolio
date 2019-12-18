@@ -1,49 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { useTypewriter } from './TypewriterContext';
 import BlinkCaret from '../caret/BlinkCaret';
 
-const TypewriterParagraph = ({ children, order = 0, typeCyclesPerSecond = 10, charactersPerCycle = 50 }) => {
-    const [currentText, setCurrentText] = useState("");
-    const [characters, setCharacters] = useState([]);
+const TypewriterParagraph = ({ children, order = 0, typeCyclesPerSecond = 30, charactersPerCycle = 20 }) => {
+
     const [isTyping, setIsTyping] = useState(false);
-
     const { currentParagraph, incrementParagraph } = useTypewriter();
+    const paragraphRef = useRef();
 
+    // State variables
+    let currentText = "";
+    let characters = "";
     const typeDelay = 1000 / typeCyclesPerSecond;
 
     useEffect(() => {
-        if (currentParagraph === order) {
-            setCharacters([...children]);
-        }
-
         setIsTyping(currentParagraph === order);
     }, [currentParagraph]);
 
     // When the array of characters is changed, this effect is triggered to type the next character
     useEffect(() => {
+        if (currentParagraph === order) {
+            characters = [...children];
+        }
+
         typeNextCharacter(characters);
-    }, [characters]);
+    }, [isTyping]);
 
     const typeNextCharacter = (characters) => {
         if (characters.length > 0) {
             setTimeout(() => {
                 const cycleCharacters = characters.splice(0, charactersPerCycle);
 
+                currentText = currentText.concat(...cycleCharacters);
+                paragraphRef.current.textContent = currentText;
+
                 if (characters.length === 0) {
                     incrementParagraph();
                 }
-
-                setCurrentText(currentText.concat(...cycleCharacters));
-                setCharacters([...characters]);
+                else {
+                    typeNextCharacter(characters);
+                }
             }, typeDelay);
         }
     }
 
     return (
         <div style={{ position: 'relative' }}>
-            <p style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', margin: '0 0' }}>{currentText}{isTyping ? <BlinkCaret /> : null}</p>
+            <p style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', margin: '0 0' }}>
+                <span ref={paragraphRef}></span>{isTyping ? <BlinkCaret /> : null}
+            </p>
             <p style={{ visibility: 'hidden' }}>{children}</p>
         </div>
     )

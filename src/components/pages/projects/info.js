@@ -172,7 +172,7 @@ export const projectsInfo = [
             github: 'https://github.com/pvnetto/OhHellBot',
         },
         description: [
-            `Oh Hell bot is a Telegram Bot I made for playing Oh Hell, a brittish card game, also known as Dane-se in Brazil. I made this
+            `Oh Hell bot is a Telegram Bot I made for playing a british card game called Oh Hell, also known as Dane-se in Brazil. I made this
             project to practice back-end development of Rest APIs with Node.JS.`,
 
             `To start playing, an user must add the bot to a group and start a new game lobby, which can be joined by other players on the group. 

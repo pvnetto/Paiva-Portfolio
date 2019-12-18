@@ -60,15 +60,10 @@ const PageCanvas = () => {
                 <Cup />
                 <Ufo />
 
-                {/* <Suspense fallback={<SphereMesh />}>
-                <Cup />
-            </Suspense>
-
-            <Suspense fallback={<SphereMesh />}>
-                <Ufo />
-            </Suspense> */}
-
-                <TerrainMesh position={[0, -97, -17.5]} />
+                <mesh position={[0, 0, 0]}>
+                    {/* <textGeometry attach="geometry" /> */}
+                    <meshBasicMaterial attach="material" color="green" wireframe />
+                </mesh>
             </Suspense>
         </Canvas>
     );
