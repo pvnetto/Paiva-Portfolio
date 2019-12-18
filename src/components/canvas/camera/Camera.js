@@ -71,6 +71,13 @@ const Camera = ({ currentScene }) => {
             Quaternion.slerp(startRot, targetRot, currentRot, animationT);
             camera.setRotationFromQuaternion(currentRot);
         }
+        else {
+            // Handles the case where rerendering the Camera would 
+            if (targetPos !== startPos) {
+                setStartPos(targetPos);
+                setStartRot(targetRot);
+            }
+        }
     });
 
     return <></>
