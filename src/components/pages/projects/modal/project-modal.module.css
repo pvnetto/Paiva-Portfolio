@@ -42,17 +42,20 @@
     opacity: 0.6;
 
     transition: all 0.3s ease;
-}
+
+    /* Increases the hitbox size of the close button */
+    padding: 1.2rem;
+} 
 
 .closeBtn:hover {
-    opacity: 0.9;
+    opacity: 1.0;
 }
 
 .closeBtn > * {
     width: 60px;
-    height: 8px;
+    height: 4px;
 
-    background-color: var(--font-color);
+    background-color: var(--blue);
     margin: 0 auto;
 }
 

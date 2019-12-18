@@ -3,16 +3,13 @@ import rocoioThumb from '../../../public/images/projects/grand_rocoio_logo.png';
 import pumpItThumb from '../../../public/images/projects/pump_it_logo.png';
 import urnaiThumb from '../../../public/images/projects/urnai.png';
 import ohHellThumb from '../../../public/images/projects/oh_hell_bot.png';
-import kgbThumb from '../../../public/images/projects/kgb_login.png';
-import nauThumb from '../../../public/images/projects/nau_home.png';
-
-import rocoioGame from '../../../public/images/projects/grand_rocoio_gameplay.png';
-import rocoioMenu from '../../../public/images/projects/grand_rocoio_menu.png';
+import kgbThumb from '../../../public/images/projects/kgb_thumb.png';
+import nauThumb from '../../../public/images/projects/nau_thumb.png';
 
 export const categories = {
     ALL: 'All',
     WEB: 'Web',
-    GAMES: 'Games',
+    GAMES: 'Game',
     AI: 'AI'
 }
 
@@ -28,6 +25,32 @@ export const roles = {
     PROGRAMMER: 'Programmer',
     GAME_DESIGNER: 'Game Designer'
 }
+
+const importAll = require =>
+    require.keys().reduce((acc, next) => {
+        acc.push(require(next).default);
+        return acc;
+    }, []);
+
+const kgbImages = importAll(
+    require.context('../../../public/images/projects/kgb', false, /\.(png|jpe?g|svg)$/)
+);
+
+const nauImages = importAll(
+    require.context('../../../public/images/projects/nau', false, /\.(png|jpe?g|svg)$/)
+);
+
+const chamaImages = importAll(
+    require.context('../../../public/images/projects/chama', false, /\.(png|jpe?g|svg)$/)
+);
+
+const grandRocoioImages = importAll(
+    require.context('../../../public/images/projects/grand_rocoio', false, /\.(png|jpe?g|svg)$/)
+);
+
+const pumpItImages = importAll(
+    require.context('../../../public/images/projects/pump_it', false, /\.(png|jpe?g|svg)$/)
+);
 
 export const projectsInfo = [
     {
@@ -49,6 +72,7 @@ export const projectsInfo = [
             justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.`
             ,
         ],
+        images: chamaImages,
         awards: []
     },
     {
@@ -68,10 +92,7 @@ export const projectsInfo = [
             Sed dignissim diam purus, vel aliquam erat tincidunt at. In a orci nunc. Praesent nec risus sit amet
             justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.`
         ],
-        images: [
-            rocoioGame,
-            rocoioMenu,
-        ],
+        images: grandRocoioImages,
         awards: []
     },
     {
@@ -91,6 +112,7 @@ export const projectsInfo = [
             Sed dignissim diam purus, vel aliquam erat tincidunt at. In a orci nunc. Praesent nec risus sit amet
             justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.`
         ],
+        images: pumpItImages,
         awards: []
     },
     {
@@ -111,6 +133,7 @@ export const projectsInfo = [
             Sed dignissim diam purus, vel aliquam erat tincidunt at. In a orci nunc. Praesent nec risus sit amet
             justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.`
         ],
+        images: kgbImages,
         awards: []
     },
     {
@@ -131,6 +154,7 @@ export const projectsInfo = [
             Sed dignissim diam purus, vel aliquam erat tincidunt at. In a orci nunc. Praesent nec risus sit amet
             justo venenatis molestie non nec sapien. In commodo maximus nibh, vitae porttitor mauris efficitur sed.`
         ],
+        images: nauImages,
         awards: []
     },
     {
