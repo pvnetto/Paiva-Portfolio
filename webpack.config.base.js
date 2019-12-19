@@ -6,14 +6,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = dotenv.config().parsed;
-let envKeys = {};
-
-if (env) {
-    envKeys = Object.keys(env).reduce((prev, next) => {
-        prev[`process.env.${next}`] = JSON.stringify(env[next]);
-        return prev;
-    }, {});
-}
 
 module.exports = {
     entry: './src/index.js',

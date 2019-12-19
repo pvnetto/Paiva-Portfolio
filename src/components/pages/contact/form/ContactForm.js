@@ -13,9 +13,7 @@ const ContactForm = () => {
         email: yup.string().email().required(),
         subject: yup.string(),
         message: yup.string().required(),
-    })
-
-    console.log(process.env.EMAILJS_USER_ID);
+    });
 
     const sendEmail = (values, e) => {
         emailjs.send(
@@ -65,9 +63,10 @@ const ContactForm = () => {
                     <div className={style.feedback}>
                         {touched.message && errors.message && <p>{errors.message}</p>}
                     </div>
-                    <div className={style.btnContainer}>
-                        <Button type={"submit"}>Send</Button>
-                    </div>
+                    {process.env.EMAILJS_USER_ID ?
+                        <div className={style.btnContainer}>
+                            <Button type={"submit"}>Send</Button>
+                        </div> : null}
                 </form>
             )}
         </Formik>
