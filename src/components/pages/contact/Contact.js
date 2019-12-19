@@ -9,8 +9,7 @@ import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 import useSceneChange from '../../scenes/useSceneChange';
 import Scenes from '../../scenes/Scenes';
 
-import style from './contact.module.css';
-import Button from '../../commons/buttons/Button';
+import ContactForm from './form/ContactForm';
 
 const Contact = () => {
 
@@ -27,21 +26,7 @@ const Contact = () => {
                     </TypewriterParagraph>
                 </TypewriterProvider>
 
-                <form className={style.contactForm} action="">
-                    <div>
-                        <input name="name" type="text" placeholder="Name" />
-                        <input name="email" type="email" placeholder="E-mail" />
-                    </div>
-                    <div>
-                        <input name="subject" type="text" placeholder="Subject" />
-                    </div>
-                    <div>
-                        <textarea name="message" type="text" placeholder="Message" />
-                    </div>
-                    <div className={style.btnContainer}>
-                        <Button>Send</Button>
-                    </div>
-                </form>
+                <ContactForm />
             </Content>
         </Container>
     );

@@ -32,8 +32,6 @@ const SphereMesh = () => {
 
     return (
         <mesh ref={meshRef} position={currentPos} drawMode={TriangleStripDrawMode}>
-            {/* <sphereGeometry ref={sphereRef} attach="geometry" args={[4.5, 64, 64, 6, Math.random() * 6, Math.random() * 6]} /> */}
-            {/* <dodecahedronBufferGeometry ref={sphereRef} attach="geometry" args={[3]} /> */}
             <polyhedronGeometry ref={sphereRef} attach="geometry" args={[verticesOfCube, indicesOfFaces, 3, 2]} />
             <meshBasicMaterial attach="material" wireframe color="green" />
         </mesh>

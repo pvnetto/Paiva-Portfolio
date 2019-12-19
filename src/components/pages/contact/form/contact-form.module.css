@@ -17,7 +17,7 @@
 }
 
 .contactForm input {
-    height: 45px;
+    height: 2.5rem;
 }
 
 .contactForm textarea {
@@ -45,4 +45,17 @@
 
 .contactForm input:focus, .contactForm textarea:focus {
     outline: none;
+}
+
+.feedback {
+    color: red;
+    margin: 0;
+}
+
+.feedback p {
+    font-size: 1rem;
+}
+
+.contactForm .feedback {
+    flex-direction: column;
 }

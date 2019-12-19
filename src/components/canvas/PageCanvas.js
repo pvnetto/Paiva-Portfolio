@@ -13,7 +13,6 @@ import style from './canvas.module.css';
 
 import Cup from './meshes/objs/Cup';
 import Ufo from './meshes/objs/Ufo';
-import Text from './meshes/text/text';
 import SkillsCarousel from './meshes/text/SkillsCarousel';
 
 // This empty Component initializes Canvas configurations.

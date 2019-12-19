@@ -8,13 +8,13 @@ import Text from './text';
 const SkillsCarousel = () => {
     const skillsRef = [];
 
-    const startCenter = new Vector3(8, -41, -20);
+    const startCenter = new Vector3(8, -41, -18);
     const endCenter = new Vector3(1, -41, -22);
     const center = useResponsivePos(startCenter, endCenter);
 
-    const fontSize = 1;
+    const fontSize = 0.8;
 
-    const animationRadius = 4;
+    const animationRadius = 3;
     const animationSpeed = 0.5;
     const offsetStrength = 2;
     let animationT = 0;

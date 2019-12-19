@@ -53,13 +53,15 @@
     "@react-spring/web": "^9.0.0-beta.34",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "formik": "^2.0.8",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-spring": "^8.0.27",
     "react-three-fiber": "^3.0.16",
     "react-use-gesture": "^6.0.14",
-    "three": "^0.111.0"
+    "three": "^0.111.0",
+    "yup": "^0.28.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",

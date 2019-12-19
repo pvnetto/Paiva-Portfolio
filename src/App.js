@@ -6,6 +6,7 @@ import PageCanvas from './components/canvas';
 import Sidenav from './components/sidenav';
 
 const App = () => {
+
     return (
         <SceneProvider >
             <Sidenav />

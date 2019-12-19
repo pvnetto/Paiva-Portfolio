@@ -130,13 +130,13 @@ export const projectsInfo = [
             github: 'https://github.com/pvnetto/Kanban-Gaming-Board-React',
         },
         description: [
-            `Kanban Gaming Board is a Kanban Board application like Trello or Hack'n'plan, but designed for game development,
+            `Kanban Gaming Board is a project management application like Trello or Hack'n'plan, but designed for game development,
             so all of its features are adapted to this context. Even though it was developed using only front-end technologies and
-            a minimal NodeJS setup, it allows user authentication/authorization with multiple social providers using Auth0, and persists
-            user data on a Firebase/Firestore cloud database.`,
+            a minimal NodeJS setup, it allows user authentication/authorization with multiple social providers through Auth0, and persists
+            user data on a cloud database through Firebase/Firestore.`,
 
-            `Some of its main features are: User authentication and authorization with multiple social providers; creating/deleting/editing as many projects,
-            boards and tasks as you want; drag'n'drop of tasks; authorizing other users to participate in your project, and many more.`
+            `Some of its main features are: User authentication and authorization with multiple social providers; creating/deleting/editing as many 
+            projects/boards/tasks as you want; drag'n'drop for tasks; authorizing other users to participate in your project, and many more.`
         ],
         images: kgbImages,
         awards: []
