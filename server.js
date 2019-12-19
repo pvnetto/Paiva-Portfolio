@@ -5,8 +5,6 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-console.log(process.env.EMAILJS_USER_ID);
-
 const port = process.env.PORT || 8080;
 
 app.use(cors());

@@ -69,3 +69,9 @@
         margin: 0.5rem;
     }
 }
+
+@media (max-width: 480px) {
+    .socialMediaBtn {
+        margin: 0.2rem;
+    }
+}

@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formik, Field } from 'formik';
 import * as yup from 'yup';
 import * as emailjs from 'emailjs-com';
 
 import Button from '../../../commons/buttons/Button';
 import style from './contact-form.module.css';
+import Spinner from '../../../commons/loading/Spinner';
 
 const ContactForm = () => {
+
+    const [isSending, setSending] = useState(false);
+    const [sendSuccess, setSuccess] = useState(false);
+
+    useEffect(() => {
+        if (sendSuccess) {
+            setTimeout(() => {
+                setSuccess(false);
+            }, 3000);
+        }
+    }, [sendSuccess])
 
     const schema = yup.object({
         name: yup.string().required(),
@@ -16,6 +28,8 @@ const ContactForm = () => {
     });
 
     const sendEmail = (values, e) => {
+        setSending(true);
+
         emailjs.send(
             'gmail',
             'portfolio_template',
@@ -26,9 +40,11 @@ const ContactForm = () => {
                 from_message: values.message
             },
             process.env.EMAILJS_USER_ID,
-        ).then(() => console.log('email sent'));
-
-        e.resetForm();
+        ).then(() => {
+            setSending(false);
+            setSuccess(true);
+            e.resetForm();
+        });
     };
 
     return (
@@ -63,10 +79,16 @@ const ContactForm = () => {
                     <div className={style.feedback}>
                         {touched.message && errors.message && <p>{errors.message}</p>}
                     </div>
+
                     {process.env.EMAILJS_USER_ID ?
                         <div className={style.btnContainer}>
+                            <div>
+                                {sendSuccess ? <p>Email succesfully sent!</p> : null}
+                            </div>
                             <Button type={"submit"}>Send</Button>
                         </div> : null}
+
+                    <Spinner loading={isSending} />
                 </form>
             )}
         </Formik>
