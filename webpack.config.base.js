@@ -66,6 +66,10 @@ module.exports = {
             inject: true,
             template: './src/public/index.html',
         }),
-        new webpack.DefinePlugin(envKeys)
+        new webpack.DefinePlugin({
+            'process.env': {
+                EMAILJS_USER_ID: JSON.stringify(process.env.EMAILJS_USER_ID)
+            }
+        }),
     ],
 }
