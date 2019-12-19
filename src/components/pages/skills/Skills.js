@@ -19,15 +19,14 @@ const Skills = () => {
                 <TypewriterProvider>
                     <TypewriterParagraph order={0}>
                         The areas I have the most experience with are front-end development and game programming, but I also have some experience with machine
-                        learning (namely Reinforcement Learning) and some knowledge in back-end programming.
+                        learning (namely Reinforcement Learning) and back-end programming.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={1}>
                         My favorite technologies for front-end development are Javascript (ES6), React, Redux, NextJS, Bootstrap 4, SASS,
                         Webpack and ThreeJS.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={2}>
-                        For game development, I usually work with Unity3D (C#) and Unreal Engine 4 (C++/Blueprint) and
-                        even the areas I'm most comfortable working with are gameplay, AI and graphics programming.
+                        For game development, I usually work with Unity3D (C#) and Unreal Engine 4 (C++/Blueprint).
                     </TypewriterParagraph>
                     <TypewriterParagraph order={3}>
                         Beyond that, I also have knowledge in Python and some of its machine learning frameworks, such as Tensorflow and Keras.

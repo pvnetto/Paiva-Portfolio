@@ -12,12 +12,9 @@ import { useScene } from '../scenes/SceneContext';
 import style from './canvas.module.css';
 
 import Cup from './meshes/objs/Cup';
-import ReactLogo from './meshes/logos/ReactLogo';
-import UnityLogo from './meshes/logos/UnityLogo';
-import JSLogo from './meshes/logos/JSLogo';
-import HTMLLogo from './meshes/logos/HTMLLogo';
-import CSSLogo from './meshes/logos/CSSLogo';
 import Ufo from './meshes/objs/Ufo';
+import Text from './meshes/text/text';
+import SkillsCarousel from './meshes/text/SkillsCarousel';
 
 // This empty Component initializes Canvas configurations.
 // We can't call useThree from inside PageCanvas because
@@ -48,17 +45,15 @@ const PageCanvas = () => {
                 <CanvasClearColor />
                 <CanvasFog />
 
-                <TerrainMesh position={[0, 0, 0]} />
+                <TerrainMesh position={[0, -1, -10.5]} />
                 <SphereMesh />
 
-                <ReactLogo />
-                <UnityLogo />
-                <JSLogo />
-                <HTMLLogo />
-                <CSSLogo />
+                <SkillsCarousel />
 
                 <Cup />
                 <Ufo />
+
+                <TerrainMesh position={[0, -97, -17.5]} />
             </Suspense>
         </Canvas>
     );

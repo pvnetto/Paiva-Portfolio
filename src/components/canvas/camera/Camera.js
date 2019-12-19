@@ -44,7 +44,7 @@ const Camera = ({ currentScene }) => {
 
     // The camera's start position equals its initial target position
     useEffect(() => {
-        camera.near = 7.2;
+        camera.near = 2;
         camera.updateProjectionMatrix();    // Forces camera to update the near plane
     }, []);
 
