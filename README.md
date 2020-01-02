@@ -2,7 +2,7 @@
 
 [Live Version](https://paiva-portfolio.herokuapp.com/)
 
-My portfolio page, made with [React](https://github.com/facebook/react), [Node.JS](https://nodejs.org/en/), [CSS Modules](https://github.com/css-modules/css-modules), [React-Three-Fiber](https://github.com/react-spring/react-three-fiber) and [Webpack](https://webpack.js.org/). Deployed to Heroku.
+My portfolio page, made with [React](https://github.com/facebook/react), [Node.JS](https://nodejs.org/en/), [CSS Modules](https://github.com/css-modules/css-modules), [React-Three-Fiber](https://github.com/react-spring/react-three-fiber) and [Webpack](https://webpack.js.org/).
 
 ## Running the project
 
