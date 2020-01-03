@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCode, faFistRaised, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import style from './sidenav.module.css'
 
@@ -25,9 +25,8 @@ const Sidenav = () => {
             </div>
 
             <div className={style.sidenavBtnsContainer}>
-                <a className={style.socialMediaBtn} href=""><FontAwesomeIcon icon={faFacebookF} /></a>
-                <a className={style.socialMediaBtn} href=""><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                <a className={style.socialMediaBtn} href=""><FontAwesomeIcon icon={faGithub} /></a>
+                <a className={style.socialMediaBtn} href="https://www.linkedin.com/in/paiva-netto/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                <a className={style.socialMediaBtn} href="https://github.com/pvnetto"><FontAwesomeIcon icon={faGithub} /></a>
             </div>
         </div>
     );

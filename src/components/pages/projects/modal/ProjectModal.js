@@ -16,7 +16,7 @@ const reduceToString = (arr) => {
     }, "");
 }
 
-const ProjectModal = ({ show, handleClose, title, category, techs, roles, links, description, images }) => {
+const ProjectModal = ({ show, handleClose, title, category, techs, roles, links, awards, description, images }) => {
 
     return (
         <>
@@ -42,11 +42,19 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, links,
                                 <h3>Techs</h3>
                                 <p>{reduceToString(techs)}</p>
                             </div>
-                            <div className={style.infoItem}>
+                            <div className={`${style.infoItem} ${style.infoItemWrap}`}>
                                 <h3>Role</h3>
                                 <p>{reduceToString(roles)}</p>
                             </div>
                         </div>
+
+                        {awards && awards.length > 0 ?
+                            <div className={style.infoRow}>
+                                <div className={style.infoItem}>
+                                    <h3>Awards</h3>
+                                    {awards.map(award => <p>{award}</p>)}
+                                </div>
+                            </div> : null}
 
                         <div className={style.infoItem + " " + style.description}>
                             <h3>Description</h3>

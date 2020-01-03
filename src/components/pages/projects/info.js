@@ -87,7 +87,7 @@ export const projectsInfo = [
             ,
         ],
         images: chamaImages,
-        awards: []
+        awards: ['Game Jam Plus - Best Concept', 'Game Jam Plus - Best Soundtrack', 'Game Jam Plus - 2nd Best Pitch', 'Game Jam Plus - 3rd Best Game']
     },
     {
         title: 'Grand Roçoio',
@@ -109,7 +109,7 @@ export const projectsInfo = [
             equal units, he can mix them together to make a more powerful, evolved one.`,
         ],
         images: grandRocoioImages,
-        awards: []
+        awards: ["Natal Game Jam - 2nd Best Game"]
     },
     {
         title: 'Pump It',

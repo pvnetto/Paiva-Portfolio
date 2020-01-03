@@ -57,6 +57,10 @@
 }
 
 @media (max-width: 767px) {
+    .projectHeader {
+        margin-bottom: 0.5rem !important;
+    }
+
     .pageContainer > div {
         align-items: flex-start;
     }

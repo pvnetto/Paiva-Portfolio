@@ -79,6 +79,8 @@
     justify-content: space-between;
 
     margin: 3rem 0;
+
+    width: 100%;
 }
 
 .infoItemWrap {
