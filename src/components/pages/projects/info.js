@@ -5,6 +5,7 @@ import urnaiThumb from '../../../public/images/projects/urnai.png';
 import ohHellThumb from '../../../public/images/projects/oh_hell_bot.png';
 import kgbThumb from '../../../public/images/projects/kgb_thumb.png';
 import nauThumb from '../../../public/images/projects/nau_thumb.png';
+import fastBoxThumb from '../../../public/images/projects/fast_box_thumb.png';
 
 export const categories = {
     ALL: 'All',
@@ -15,10 +16,18 @@ export const categories = {
 
 export const techs = {
     ALL: 'All',
-    JAVASCRIPT: 'JavaScript',
-    PYTHON: 'Python',
+    VANILLA_JS: 'Vanilla JS',
     REACT: 'React',
-    UNITY3D: 'Unity3D'
+    UNITY3D: 'Unity3D',
+    NODE: 'Node',
+    REDUX: 'Redux',
+    NEXT_JS: 'NextJS',
+    BOOTSTRAP: 'Bootstrap 4',
+    SCSS: 'SCSS',
+    JEST: 'Jest',
+    AUTH0: 'Auth0',
+    FIREBASE: 'Firebase',
+    PYTHON: 'Python',
 }
 
 export const roles = {
@@ -34,6 +43,10 @@ const importAll = require =>
 
 const kgbImages = importAll(
     require.context('../../../public/images/projects/kgb', false, /\.(png|jpe?g|svg)$/)
+);
+
+const fastBoxImages = importAll(
+    require.context('../../../public/images/projects/fastbox', false, /\.(png|jpe?g|svg)$/)
 );
 
 const nauImages = importAll(
@@ -122,7 +135,7 @@ export const projectsInfo = [
     {
         title: 'Kanban Gaming Board',
         category: categories.WEB,
-        techs: [techs.JAVASCRIPT, techs.REACT],
+        techs: [techs.REACT, techs.REDUX, techs.NODE, techs.SCSS, techs.BOOTSTRAP, techs.FIREBASE, techs.AUTH0],
         roles: [roles.PROGRAMMER],
         thumbnail: kgbThumb,
         links: {
@@ -142,9 +155,28 @@ export const projectsInfo = [
         awards: []
     },
     {
+        title: 'FastBox Serviços Automotivos',
+        category: categories.WEB,
+        techs: [techs.REACT, techs.NEXT_JS, techs.SCSS],
+        roles: [roles.PROGRAMMER],
+        thumbnail: fastBoxThumb,
+        links: {
+            live: 'https://fastbox.now.sh/',
+            github: 'https://github.com/pvnetto/FastBox-Site',
+        },
+        description: [
+            `Webpage for FastBox Serviços Automotivos, a car repair shop based in Natal/RN, Brazil.`,
+
+            `The main features of this application are its mobile-first design and server-side-rendering with Next.JS. The reason I've opted
+            for server-side-rendering is because SEO was a priority, and it is known that pure React applications can't deliver good SEO.`
+        ],
+        images: fastBoxImages,
+        awards: []
+    },
+    {
         title: 'Nau Frutos do Mar',
         category: categories.WEB,
-        techs: [techs.JAVASCRIPT],
+        techs: [techs.VANILLA_JS],
         roles: [roles.PROGRAMMER],
         thumbnail: nauThumb,
         links: {
@@ -155,8 +187,8 @@ export const projectsInfo = [
             `This project is a redesign I made for a local seafood restaurant. It's not an official redesign, so the company didn't ask me to do it,
             I did it for study purposes only.`,
 
-            `The main goal of this project was to take a dated website from a well-established local brand and make it more fit to the current
-            standards of web development, with a modern, mobile-first design. `
+            `The main goal of this project was to make an outdated website from a well-established local brand more fit to the current
+            standards of web development, with a modern, mobile-first design.`
         ],
         images: nauImages,
         awards: []
@@ -164,7 +196,7 @@ export const projectsInfo = [
     {
         title: 'Oh Hell Bot',
         category: categories.WEB,
-        techs: [techs.JAVASCRIPT],
+        techs: [techs.VANILLA_JS, techs.NODE, techs.JEST],
         roles: [roles.PROGRAMMER],
         thumbnail: ohHellThumb,
         links: {

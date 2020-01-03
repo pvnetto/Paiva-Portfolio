@@ -38,7 +38,7 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, links,
                                 <h3>Category</h3>
                                 <p>{category}</p>
                             </div>
-                            <div className={style.infoItem}>
+                            <div className={`${style.infoItem} ${style.infoItemWrap}`}>
                                 <h3>Techs</h3>
                                 <p>{reduceToString(techs)}</p>
                             </div>

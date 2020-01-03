@@ -15,11 +15,7 @@ const TechFilter = ({ setTechFilter, activeTech }) => {
         <div>
             <p className={style.filterHeader}>Filter by tech:</p>
             <div className={style.btnsContainer}>
-                <TechButton tech={techs.ALL}>All</TechButton>
-                <TechButton tech={techs.JAVASCRIPT}>JavaScript</TechButton>
-                <TechButton tech={techs.PYTHON}>Python</TechButton>
-                <TechButton tech={techs.REACT}>React</TechButton>
-                <TechButton tech={techs.UNITY3D}>Unity3D</TechButton>
+                {Object.values(techs).map((tech, idx) => <TechButton key={idx} tech={tech}>{tech}</TechButton>)}
             </div>
         </div>
     );

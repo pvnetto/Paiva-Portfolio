@@ -81,8 +81,8 @@
     margin: 3rem 0;
 }
 
-.infoItem {
-    width: 100%;
+.infoItemWrap {
+    max-width: 33%;
 }
 
 .infoItem > h3 {

@@ -23,10 +23,10 @@ const Skills = () => {
                     </TypewriterParagraph>
                     <TypewriterParagraph order={1}>
                         My favorite technologies for front-end development are Javascript (ES6), React, Redux, NextJS, Bootstrap 4, SASS,
-                        Webpack and ThreeJS.
+                        Webpack and ThreeJS. Besides those, I also use Figma to sketch my applications before production.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={2}>
-                        For game development, I usually work with Unity3D (C#) and Unreal Engine 4 (C++/Blueprint).
+                        For game development, I work mostly with Unity3D (C#) and Unreal Engine 4 (C++/Blueprint).
                     </TypewriterParagraph>
                     <TypewriterParagraph order={3}>
                         Beyond that, I also have knowledge in Python and some of its machine learning frameworks, such as Tensorflow and Keras.
