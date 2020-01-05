@@ -28,7 +28,6 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            // importLoaders: 1,
                             modules: true
                         }
                     }
@@ -42,7 +41,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|gif|obj)$/,
+                test: /\.(png|svg|jpg|gif|obj|pdf)$/,
                 use: [
                     'file-loader'
                 ]

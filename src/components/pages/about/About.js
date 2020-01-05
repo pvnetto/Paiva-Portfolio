@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Container from '../../commons/container';
 import Content from '../../commons/content';
@@ -6,6 +6,10 @@ import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 import useSceneChange from '../../scenes/useSceneChange';
 import Scenes from '../../scenes/Scenes';
+import Button from '../../commons/buttons/Button';
+
+import resumePDF from '../../../public/pdf/paiva_resume.pdf';
+import style from './about.module.css';
 
 const About = () => {
 
@@ -27,6 +31,8 @@ const About = () => {
                         equally hard-working people. So if you're interested in any of this, feel free to contact me.
                     </TypewriterParagraph>
                 </TypewriterProvider>
+
+                <a className={style.btn} href={resumePDF} target="_blank"><Button>MY RESUME</Button></a>
             </Content>
         </Container>
     );
