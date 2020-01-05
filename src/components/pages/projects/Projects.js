@@ -10,7 +10,8 @@ import Scenes from '../../scenes/Scenes';
 import ProjectItem from './item/ProjectItem';
 import ProjectModal from './modal/ProjectModal';
 
-import { categories, techs, projectsInfo } from './info';
+import { categories, techs } from './info/types';
+import { projectsInfo } from './info'
 import CategoryFilter from './filters/CategoryFilter';
 import TechFilter from './filters/TechFilter';
 import useSceneChange from '../../scenes/useSceneChange';
@@ -56,6 +57,7 @@ const Projects = () => {
                     <TypewriterProvider>
                         <TypewriterParagraph order={0}>
                             Here are some of my favorite/most recent projects. You can find the code for most of them (and many other) on my Github.
+                            Click on a project to see its details.
                     </TypewriterParagraph>
                     </TypewriterProvider>
 

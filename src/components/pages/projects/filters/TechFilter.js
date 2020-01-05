@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import style from './filter.module.css';
 import Button from '../../../commons/buttons/Button';
-import { techs } from '../info';
+import { techs } from '../info/types';
 
 const TechFilter = ({ setTechFilter, activeTech }) => {
 

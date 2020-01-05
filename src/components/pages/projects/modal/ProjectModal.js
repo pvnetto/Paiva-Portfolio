@@ -52,7 +52,7 @@ const ProjectModal = ({ show, handleClose, title, category, techs, roles, links,
                             <div className={style.infoRow}>
                                 <div className={style.infoItem}>
                                     <h3>Awards</h3>
-                                    {awards.map(award => <p>{award}</p>)}
+                                    {awards.map((award, idx) => <p key={idx}>{award}</p>)}
                                 </div>
                             </div> : null}
 
