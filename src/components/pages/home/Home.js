@@ -23,11 +23,11 @@ const Home = () => {
                 </div>
                 <div className={style.btnContainer}>
                     <Link className={style.homeBtn} to="/contact">
-                        <Button>Contact me</Button>
+                        <Button>CONTACT ME</Button>
                     </Link>
 
                     <Link className={style.homeBtn} to="/projects">
-                        <Button>Check my work</Button>
+                        <Button>MY PROJECTS</Button>
                     </Link>
                 </div>
             </div>
