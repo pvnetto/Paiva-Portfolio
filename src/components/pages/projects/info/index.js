@@ -4,6 +4,4 @@ export const importAll = require =>
         return acc;
     }, []);
 
-export const projectsInfo = importAll(
-    require.context('../info', false, /\.(js)$/)
-);
+export const projectsInfo = importAll(require.context('../info', false, /\.(js)$/));

@@ -12,7 +12,7 @@ const TechFilter = ({ setTechFilter, activeTech }) => {
     }
 
     return (
-        <div>
+        <div id="tech-filter">
             <p className={style.filterHeader}>Filter by tech:</p>
             <div className={style.btnsContainer}>
                 {Object.values(techs).map((tech, idx) => <TechButton key={idx} tech={tech}>{tech}</TechButton>)}

@@ -12,7 +12,7 @@ const CategoryFilter = ({ setCategoryFilter, activeCategory }) => {
     }
 
     return (
-        <div>
+        <div id="category-filter">
             <p className={style.filterHeader}>Filter by category:</p>
             <div className={style.btnsContainer}>
                 <CategoryButton category={categories.ALL}>All</CategoryButton>

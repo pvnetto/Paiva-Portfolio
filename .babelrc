@@ -13,6 +13,13 @@
         ],
         "@babel/react"
     ],
+    "env": {
+        "test": {
+            "plugins": [
+                "require-context-hook"
+            ]
+        }
+    },
     "plugins": [
         "@babel/proposal-class-properties",
         "@babel/proposal-object-rest-spread"
