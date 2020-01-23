@@ -12,7 +12,7 @@ import ProjectModal from './modal/ProjectModal';
 
 import { categories, techs } from './info/types';
 import { projectsInfo } from './info'
-import { isProjectFiltered } from './filters/utils';
+import { isProjectFilteredOut } from './filters/utils';
 import CategoryFilter from './filters/CategoryFilter';
 import TechFilter from './filters/TechFilter';
 import useSceneChange from '../../scenes/useSceneChange';
@@ -57,7 +57,7 @@ const Projects = () => {
 
                 <div className={style.itemContainer}>
                     {projectsInfo.map((project, idx) => {
-                        const isHidden = isProjectFiltered(techFilter, categoryFilter, project);
+                        const isHidden = isProjectFilteredOut(techFilter, categoryFilter, project);
                         return <ProjectItem key={idx} projectInfo={project} openModal={openInfoModal} hidden={isHidden} />;
                     })}
                 </div>

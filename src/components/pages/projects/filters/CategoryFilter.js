@@ -15,9 +15,9 @@ const CategoryFilter = ({ setCategoryFilter, activeCategory }) => {
         <div id="category-filter">
             <p className={style.filterHeader}>Filter by category:</p>
             <div className={style.btnsContainer}>
-                <CategoryButton category={categories.ALL}>All</CategoryButton>
-                <CategoryButton category={categories.WEB}>Web</CategoryButton>
-                <CategoryButton category={categories.GAMES}>Games</CategoryButton>
+                <CategoryButton category={categories.ALL}>{categories.ALL}</CategoryButton>
+                <CategoryButton category={categories.WEB}>{categories.WEB}</CategoryButton>
+                <CategoryButton category={categories.GAMES}>{categories.GAMES}</CategoryButton>
             </div>
         </div>
     );

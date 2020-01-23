@@ -9,7 +9,7 @@ import ProjectItem from '../components/pages/projects/item/ProjectItem';
 import { projectsInfo } from '../components/pages/projects/info';
 import Button from '../components/commons/buttons/Button';
 import { categories, techs } from '../components/pages/projects/info/types';
-import { isProjectFiltered } from '../components/pages/projects/filters/utils';
+import { isProjectFilteredOut } from '../components/pages/projects/filters/utils';
 
 const setScene = jest.fn();
 
@@ -27,7 +27,7 @@ it('renders projects page', () => {
     wrapper.unmount();
 });
 
-describe("project page", () => {
+describe("project page filters", () => {
     let wrapper;
     beforeEach(() => {
         wrapper = mount(
@@ -67,16 +67,25 @@ describe("project page", () => {
         const categoryContainer = wrapper.find('#category-filter');
         const techContainer = wrapper.find('#tech-filter');
 
-        const categoryBtns = categoryContainer.find(Button);
-        const techBtns = techContainer.find(Button);
+        const categoryBtns = categoryContainer.find('button');
+        const techBtns = techContainer.find('button');
 
+        // Clicks each filter btn
+        for (let i = 0; i < categoryBtns.length; i++) {
+            for (let j = 0; j < techBtns.length; j++) {
+                const categoryBtn = categoryBtns.at(i);
+                const techBtn = techBtns.at(j);
+                categoryBtn.simulate('click');
+                techBtn.simulate('click');
 
-        // Clicks filter btn
-        categoryBtns.at(1).simulate('click');
+                // Checks if number of rendered projects is correct
+                const hiddenProjects = projectsInfo.filter(project => isProjectFilteredOut(techBtn.text(), categoryBtn.text(), project));
+                let projectItems = wrapper.find(ProjectItem);
+                projectItems = projectItems.map((item, idx) => projectItems.at(idx));
+                const hiddenItems = projectItems.filter((item) => item.props().hidden);
 
-        // Checks if number of rendered projects is correct
-        const items = wrapper.find(ProjectItem);
-
-
+                expect(hiddenItems).toHaveLength(hiddenProjects.length);
+            };
+        }
     });
 });

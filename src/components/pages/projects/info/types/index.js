@@ -1,7 +1,7 @@
 export const categories = {
     ALL: 'All',
     WEB: 'Web',
-    GAMES: 'Game',
+    GAMES: 'Games',
     AI: 'AI'
 }
 

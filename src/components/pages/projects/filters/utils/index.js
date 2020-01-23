@@ -1,6 +1,6 @@
 import { categories, techs } from '../../info/types';
 
-export const isProjectFiltered = (techFilter, categoryFilter, projectInfo) => {
+export const isProjectFilteredOut = (techFilter, categoryFilter, projectInfo) => {
     if (categoryFilter !== categories.ALL && projectInfo.category !== categoryFilter) {
         return true;
     }
