@@ -46,8 +46,8 @@ const Projects = () => {
 
                     <TypewriterProvider>
                         <TypewriterParagraph order={0}>
-                            Here are some of my favorite/most recent projects. You can find the code for most of them (and many other) on my Github.
-                            Click on a project to see its details.
+                            Here are some of the projects I've had the priviledge to work on.
+                            You can click on them see more details.
                     </TypewriterParagraph>
                     </TypewriterProvider>
 

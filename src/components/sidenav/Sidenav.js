@@ -20,7 +20,7 @@ const Sidenav = () => {
                 <SidenavLink title={"Home"} to={"/"} icon={faHome} />
                 <SidenavLink title={"About"} to={"/about"} icon={faUser} />
                 <SidenavLink title={"Skills"} to={"/skills"} icon={faFistRaised} />
-                <SidenavLink title={"Works"} to={"/projects"} icon={faCode} />
+                <SidenavLink title={"Projects"} to={"/projects"} icon={faCode} />
                 <SidenavLink title={"Contact"} to={"/contact"} icon={faEnvelope} />
             </div>
 

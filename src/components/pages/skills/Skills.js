@@ -18,18 +18,21 @@ const Skills = () => {
                 <Content.Header text={"My Skills"} />
                 <TypewriterProvider>
                     <TypewriterParagraph order={0}>
-                        The areas I have the most experience with are front-end development and game programming, but I also have some experience with machine
-                        learning (namely Reinforcement Learning) and back-end programming.
+                        My main area of expertise is game programming, but I've also worked as a Front-End Engineer before, and had some experience with machine
+                        learning and back-end programming in the past.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={1}>
-                        My favorite technologies for front-end development are Javascript (ES6), React, Redux, NextJS, Bootstrap 4, SASS,
-                        Webpack and ThreeJS. Besides those, I also use Figma to sketch my applications before production.
+                        For game development, I've mostly worked with Unreal Engine during my career, but I'm also familiar with Unity3D, have worked with custom engines in the past,
+                        and even developed some engine systems as work and side-projects, like renderers, serializers, file system managers and whatnot. I honestly believe that as a programmer,
+                        learning about game engines and not the game engines is the way to go. There's no point in learning them as tools and not understanding the underlying tech that makes them tick.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={2}>
-                        For game development, I work mostly with Unity3D (C#) and Unreal Engine 4 (C++/Blueprint).
+                        As for front-end development, my go-to tech stack is Javascript (ES6), React, Redux, NextJS, Bootstrap 4, SASS,
+                        Webpack and ThreeJS. Besides those, I also use Figma to sketch my applications before production.
                     </TypewriterParagraph>
                     <TypewriterParagraph order={3}>
-                        Beyond that, I also have knowledge in Python and some of its machine learning frameworks, such as Tensorflow and Keras.
+                        Beyond that, I'm also familiar with a plethora of unrelated technologies just from tinkering around with code, so if I didn't mention something here, there's a chance
+                        I know it still, or would be willing to learn it.
                     </TypewriterParagraph>
                 </TypewriterProvider>
             </Content>

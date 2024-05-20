@@ -18,8 +18,8 @@ const Home = () => {
                 <div>
                     <h1>Hi,</h1>
                     <h1>I'm <span className={style.emphasized}>Paiva</span>,</h1>
-                    <h1>web and game developer</h1>
-                    <p className={style.lowkey}>Front End Developer / Game Programmer</p>
+                    <h1>game and web developer </h1>
+                    <p className={style.lowkey}>Game Programmer / Front-End Engineer</p>
                 </div>
                 <div className={style.btnContainer}>
                     <Link className={style.homeBtn} to="/contact">

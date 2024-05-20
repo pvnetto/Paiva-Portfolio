@@ -17,8 +17,8 @@ export const techs = {
     SCSS: 'SCSS',
     JEST: 'Jest',
     AUTH0: 'Auth0',
-    FIREBASE: 'Firebase',
-    PYTHON: 'Python',
+    CPP: 'C++',
+    UNREAL: 'Unreal Engine',
 }
 
 export const roles = {
