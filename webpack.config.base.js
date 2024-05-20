@@ -45,7 +45,19 @@ module.exports = {
                 use: [
                     'file-loader'
                 ]
-            }
+            },
+            {
+                test: /\.json$/,
+                type: 'json'
+            },
+            // .js imports
+            // From: https://stackoverflow.com/questions/69427025/programmatic-webpack-jest-esm-cant-resolve-module-without-js-file-exten
+            {
+                test: /\.m?js/,
+                resolve: {
+                    fullySpecified: false,
+                },
+            },
         ]
     },
     resolve: {

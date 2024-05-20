@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import style from './content.module.css';
+import * as style from './content.module.css';
 import GlitchHeader from '../headers/GlitchHeader';
 
 const Header = ({ text }) => {

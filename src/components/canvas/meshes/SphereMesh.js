@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { TriangleStripDrawMode, Vector3 } from 'three';
-import { useFrame } from 'react-three-fiber';
+import { useFrame } from '@react-three/fiber';
 
 import useResponsivePos from './useResponsivePos';
 

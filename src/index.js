@@ -1,18 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './global.module.css';
 
 const AppWrapper = () => {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" component={App} />
-            </Switch>
-        </BrowserRouter>
+        <Router>
+            <Routes>
+                <Route path="/*" element={<App/>} />
+            </Routes>
+        </Router>
     )
 }
 
-ReactDOM.render(<AppWrapper />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
+root.render(<AppWrapper />)

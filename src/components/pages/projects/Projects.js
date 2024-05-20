@@ -5,7 +5,7 @@ import Container from '../../commons/container';
 import { TypewriterProvider } from '../../commons/typewriter/TypewriterContext';
 import TypewriterParagraph from '../../commons/typewriter/TypewriterParagraph';
 
-import style from './projects.module.css';
+import * as style from './projects.module.css';
 import Scenes from '../../scenes/Scenes';
 import ProjectItem from './item/ProjectItem';
 import ProjectModal from './modal/ProjectModal';

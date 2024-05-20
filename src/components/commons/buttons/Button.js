@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './button.module.css';
+import * as style from './button.module.css';
 
 const Button = ({ active = false, onClick, type = "button", className, children }) => {
     return (

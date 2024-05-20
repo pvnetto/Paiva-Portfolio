@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { extend, useThree, useFrame } from 'react-three-fiber';
+import { extend, useThree, useFrame } from '@react-three/fiber';
 import PropTypes from 'prop-types';
 
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
@@ -28,7 +28,7 @@ const Effects = ({ currentScene }) => {
 
             setTimeout(() => {
                 setIsGlitching(false);
-            }, 1000);
+            }, 350);
         }
     }, [currentScene]);
 
@@ -37,10 +37,10 @@ const Effects = ({ currentScene }) => {
 
     return (
         <effectComposer ref={composer} args={[gl]}>
-            <renderPass attachArray="passes" args={[scene, camera]} renderToScreen />
-            {isGlitching ? <glitchPass attachArray="passes" renderToScreen /> : null}
-            <bloomPass attachArray="passes" args={[1, 25, 0.8, 1024]} />
-            <filmPass attachArray="passes" args={[0.35, 0.025, 648, false]} renderToScreen />
+            <renderPass attach="passes-0" args={[scene, camera]} />
+            {isGlitching ? <glitchPass attach="passes-1" enabled={isGlitching} clear={isGlitching} /> : <renderPass attach="passes-1" args={[scene, camera]} />}
+            <bloomPass attach="passes-2" args={[1.0, 25, 0.8, 1024]} />
+            <filmPass attach="passes-3" args={[0.35, 0.025, 1024, false]} />
         </effectComposer>
     )
 }

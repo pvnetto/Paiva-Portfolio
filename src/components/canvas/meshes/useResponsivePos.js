@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useThree } from 'react-three-fiber';
+import { useThree } from '@react-three/fiber';
 import { Vector3 } from 'three';
 
 const clamp = (value, min, max) => {

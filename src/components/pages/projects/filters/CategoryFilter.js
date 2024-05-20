@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './filter.module.css';
+import * as style from './filter.module.css';
 import { categories } from '../info/types';
 import Button from '../../../commons/buttons/Button';
 

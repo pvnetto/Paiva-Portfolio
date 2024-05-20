@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import itemImg from '../../../../public/images/terrain_wire.png';
 
-import style from './project-item.module.css';
+import * as style from './project-item.module.css';
 
 const ProjectItem = ({ projectInfo, openModal, hidden }) => {
 

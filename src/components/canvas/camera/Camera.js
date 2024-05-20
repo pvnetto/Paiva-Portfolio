@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useThree, useFrame } from 'react-three-fiber';
+import { useThree, useFrame } from '@react-three/fiber';
 import { Euler, Vector3, Quaternion } from 'three';
 
 import Scenes from '../../scenes/Scenes';
@@ -64,12 +64,16 @@ const Camera = ({ currentScene }) => {
             let animationT = animationTime / animationDuration;
             animationT = Math.min(animationT, 1.0);
 
-            const newPos = new Vector3(camera.position.x, camera.position.y, camera.position.z).lerpVectors(startPos, targetPos, animationT);
-            camera.position.set(newPos.x, newPos.y, newPos.z);
-
-            const currentRot = new Quaternion();
-            Quaternion.slerp(startRot, targetRot, currentRot, animationT);
-            camera.setRotationFromQuaternion(currentRot);
+            if (startPos && targetPos)
+            {
+                let newPos = new Vector3(camera.position.x, camera.position.y, camera.position.z);
+                newPos = newPos.lerpVectors(startPos, targetPos, animationT);
+                camera.position.set(newPos.x, newPos.y, newPos.z);
+    
+                const currentRot = new Quaternion();
+                currentRot.slerpQuaternions(startRot, targetRot, animationT);
+                camera.setRotationFromQuaternion(currentRot);
+            }
         }
         else {
             // Handles the case where re-rendering the Camera component would reset the animation

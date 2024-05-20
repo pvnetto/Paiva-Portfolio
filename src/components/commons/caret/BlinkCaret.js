@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './caret.module.css';
+import * as style from './caret.module.css';
 
 const BlinkCaret = () => {
     return (

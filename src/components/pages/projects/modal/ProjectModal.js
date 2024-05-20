@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import style from './project-modal.module.css';
+import * as style from './project-modal.module.css';
 import Button from '../../../commons/buttons/Button';
 
 const reduceToString = (arr) => {

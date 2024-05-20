@@ -1,17 +1,16 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useFrame, useLoader, useThree } from 'react-three-fiber';
+import { useFrame, useLoader, useThree } from '@react-three/fiber';
 
 import { MeshPhongMaterial, MeshBasicMaterial, Vector3 } from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 import useResponsivePos from '../useResponsivePos';
 
-import cup from '../../../../public/objs/ufo.obj';
+import ufo from '../../../../public/objs/ufo.obj';
 
 const Ufo = () => {
     const { size } = useThree();
 
-    const meshRef = useRef();
     const sphereRef = useRef();
 
     // Responsive obj pos parameters
@@ -33,12 +32,11 @@ const Ufo = () => {
         currentPos.x += currentSine * horizontalMoveMult;
         currentPos.y += currentCos;
 
-        meshRef.current.position.set(currentPos.x, currentPos.y, currentPos.z);
-        meshRef.current.rotation.y += 0.002 * animationSpeed;
+        sphereRef.current.position.set(currentPos.x, currentPos.y, currentPos.z);
+        sphereRef.current.rotation.y += 0.002 * animationSpeed;
     });
 
-    const ufoObj = useLoader(OBJLoader, cup);
-
+    const ufoObj = useLoader(OBJLoader, ufo);
     ufoObj.traverse((node) => {
         if (node.material) {
             node.material = new MeshBasicMaterial({ color: 'green', wireframe: true });
@@ -46,9 +44,7 @@ const Ufo = () => {
     });
 
     return (
-        <mesh ref={meshRef} rotation={[0.46, 0, 0]} scale={[2.2, 2.2, 2.2]}>
-            <primitive ref={sphereRef} attach="geometry" object={ufoObj} />
-        </mesh>
+        <primitive ref={sphereRef} rotation={[0.46, 0, 0]} scale={[2.2, 2.2, 2.2]} object={ufoObj} />
     );
 }
 

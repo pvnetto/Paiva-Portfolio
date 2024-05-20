@@ -34,7 +34,10 @@ const TypewriterParagraph = ({ children, order = 0, typeCyclesPerSecond = 30, ch
                 const cycleCharacters = characters.splice(0, charactersPerCycle);
 
                 currentText = currentText.concat(...cycleCharacters);
-                paragraphRef.current.textContent = currentText;
+                if (paragraphRef.current)
+                {
+                    paragraphRef.current.textContent = currentText;
+                }
 
                 if (characters.length === 0) {
                     incrementParagraph();

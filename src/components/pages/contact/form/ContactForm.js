@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import * as emailjs from 'emailjs-com';
 
 import Button from '../../../commons/buttons/Button';
-import style from './contact-form.module.css';
+import * as style from './contact-form.module.css';
 import Spinner from '../../../commons/loading/Spinner';
 
 const ContactForm = () => {
