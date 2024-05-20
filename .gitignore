@@ -13,5 +13,8 @@ npm-debug.log
 Dockerfile
 docker-compose.yml
 
+# Build/distribution folder
+dist/
+
 # Project docs
 docs/

@@ -2,6 +2,7 @@
   "name": "paiva-portfolio",
   "version": "1.0.0",
   "description": "Paiva's Portfolio website",
+  "homepage": "https://pvnetto.github.io/pvnetto-dot-com",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -12,7 +13,9 @@
     "build": "webpack --config webpack.config.prod.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "jest": {
     "verbose": true,
@@ -88,6 +91,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-webpack-plugin": "^4.1.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
