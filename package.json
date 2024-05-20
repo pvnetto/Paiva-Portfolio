@@ -2,7 +2,7 @@
   "name": "paiva-portfolio",
   "version": "1.0.0",
   "description": "Paiva's Portfolio website",
-  "homepage": "https://pvnetto.github.io/pvnetto-dot-com",
+  "homepage": "https://pvnetto.github.io/Paiva-Portfolio/",
   "main": "index.js",
   "directories": {
     "doc": "docs"
