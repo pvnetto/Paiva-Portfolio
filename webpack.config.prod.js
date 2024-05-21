@@ -1,7 +1,10 @@
-const baseConfig = require('./webpack.config.base');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.config.base');
 
-module.exports = {
-    ...baseConfig,
+module.exports = merge(common, {
+    output: {
+        publicPath: './',
+    },
     mode: 'production',
     // devtool: '',
     optimization: {
@@ -9,4 +12,4 @@ module.exports = {
             chunks: 'all',
         }
     }
-}
+});

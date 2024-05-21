@@ -15,8 +15,6 @@ export const techs = {
     NEXT_JS: 'NextJS',
     BOOTSTRAP: 'Bootstrap 4',
     SCSS: 'SCSS',
-    JEST: 'Jest',
-    AUTH0: 'Auth0',
     CPP: 'C++',
     UNREAL: 'Unreal Engine',
 }
